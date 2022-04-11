@@ -1,0 +1,26 @@
+DataBase
+-------------------
+It is use to store data in the grid format.
+Grid means rows and columns.
+example :- we have a student table.
+student table has rows and columns 
+rollno	name	address 	phoneno
+-------------------------------------------------------------
+1	sandip	bangalore	7766554433
+2	kiran	bangalore	7788666555
+------------------------------------------------------------------
+rollno is a column.name is a column,address is a column,phoneno is a column.
+-----------------------------------------------------------------------
+each column has a datatype
+example:- rollno number,name is varchar2(30),address varchar2(30),phoneno number;
+-------------------------------
+how to create a student table?
+create table student223(rollno number,name varchar2(30),address varchar2(30),phoneno number);
+-------------------------------------------
+to insert data?
+insert into student223 values(101,'sandip','bangalore',7766554433);
+insert into student223 values(102,'kiran','bangalore',7766554493);
+-----------------------------------------------------------------
+to view the data?
+select * from student223;
+-------------------------------------------------
