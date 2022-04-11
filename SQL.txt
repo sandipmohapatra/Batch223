@@ -24,3 +24,7 @@ insert into student223 values(102,'kiran','bangalore',7766554493);
 to view the data?
 select * from student223;
 -------------------------------------------------
+to update a data
+
+update student223 set address='hydrabad' where rollno=102;
+-------------------------------------------------------------------------------------------------
