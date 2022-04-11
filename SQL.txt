@@ -90,6 +90,22 @@ write the querries and send to sandip7760213015@gmail.com
 3)check the comparative operators for the cost columns.
 write the querries and send to sandip7760213015@gmail.com
 ------------------------------------------------------------------------------------------------
+create table for airline reservation system
+--------------------------------------------------------------------
+create table fare (id number(19) , fare varchar2(255), flight_date varchar2(255), flight_number varchar2(255));
+
+create table flight (id number(19) , destination varchar2(255), flight_date varchar2(255), 
+flight_number varchar2(255), origin varchar2(255));
+
+create table booking_record (id number(19) primary key, booking_date timestamp, destination varchar2(255), price varchar2(255), flight_date varchar2(255), flight_number varchar2(255), origin varchar2(255), status varchar2(255));
+
+create table inventory (id number(19) , available number(10) , flight_date varchar2(255), flight_number varchar2(255));
+
+create table passenger (id number(19), first_name varchar2(255), gender varchar2(255), last_name varchar2(255), booking_id number(19));
+
+--------------------------------------------------------------------------------------------------------
+
+
 
 
 
