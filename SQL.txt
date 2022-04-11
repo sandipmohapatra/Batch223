@@ -28,3 +28,6 @@ to update a data
 
 update student223 set address='hydrabad' where rollno=102;
 -------------------------------------------------------------------------------------------------
+to update a data
+update student223 set address='Pune' where rollno=101;
+---------------------------------------------------------------------------------------------
