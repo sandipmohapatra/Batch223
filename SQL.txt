@@ -68,11 +68,28 @@ select * from student223 where salary!=76000;
 select * from student223 where salary<76000;
 select * from student223 where salary>36000;
 ------------------------------------------------------------------------------------
+3)comparison operator :- between and,not between,in,not in
+-----------------------------------------------------------------------------------------
+select * from student223 where salary between 35000 and 75000;
 
+select * from student223 where salary not between 35000 and 75000;
 
+select * from student223 where salary in(36000,76000);
 
+select * from student223 where salary not in(34000,76000);
 
-
+-----------------------------------------------------------------------------------------------------
+Assignment-1
+1)Create a employee table (empno,name,salary,designation.)
+2)add a column dept ,phoneno and email.
+3)check the comparative operators for the salary columns.
+write the querries and send to sandip7760213015@gmail.com
+----------------------------------------------------------------------------------------
+1)Create a product table  (pid,pname,cost,weight.)
+2)add a column procolor.
+3)check the comparative operators for the cost columns.
+write the querries and send to sandip7760213015@gmail.com
+------------------------------------------------------------------------------------------------
 
 
 
