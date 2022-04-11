@@ -59,6 +59,15 @@ select rollno,name,address,salary/30 from student223;
 
 select rollno,name,address,salary/30 as PerDaysalary from student223;
 ------------------------------------------------------------------------------------------------------------
+2)comparison operator(=,<,>,<=,>=,!=(not equal to)
+------------------------------------------------------------------------
+select * from student223 where salary=76000;
+select * from student223 where salary>=76000;
+select * from student223 where salary<=76000;
+select * from student223 where salary!=76000;
+select * from student223 where salary<76000;
+select * from student223 where salary>36000;
+------------------------------------------------------------------------------------
 
 
 
