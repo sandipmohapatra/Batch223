@@ -175,4 +175,11 @@ insert into salary223 values(104,15890.44,'bangalore');
 4)if the data is present in the child table we cannot delete from the parent table and make the child orfane.
 
 ----------------------------------------------------------------------------------------------------------------
+create table emp223(empno number primary key, name varchar2(30) not null, phoneno number unique,age number check(age >=18));-------a
+------------------------------------------------------------------
+create table salary223(empno number references emp223,salary number(9,2),address varchar2(30));------b
+--------------------Join---------------------------
+
+select a.empno, a.name, a.phoneno, a.age, b.salary, b.address from emp223 a,salary223 b where a.empno=b.empno;
+-----------------------------------------------------------------------------------------------------------
 
