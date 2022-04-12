@@ -90,20 +90,52 @@ write the querries and send to sandip7760213015@gmail.com
 3)check the comparative operators for the cost columns.
 write the querries and send to sandip7760213015@gmail.com
 ------------------------------------------------------------------------------------------------
-create table for airline reservation system
---------------------------------------------------------------------
+create table for airline reservation system and insert data
+----------------------------------------------------------------------------------
 create table fare (id number(19) , fare varchar2(255), flight_date varchar2(255), flight_number varchar2(255));
 
 create table flight (id number(19) , destination varchar2(255), flight_date varchar2(255), 
 flight_number varchar2(255), origin varchar2(255));
-
-create table booking_record (id number(19) primary key, booking_date timestamp, destination varchar2(255), price varchar2(255), flight_date varchar2(255), flight_number varchar2(255), origin varchar2(255), status varchar2(255));
+-------------------------------------------
+date --->   '01-jan-2022'
+------------------------------------
+create table booking_record (id number(19) , booking_date date, destination varchar2(255), price varchar2(255), flight_date varchar2(255), flight_number varchar2(255), origin varchar2(255), status varchar2(255));
 
 create table inventory (id number(19) , available number(10) , flight_date varchar2(255), flight_number varchar2(255));
 
 create table passenger (id number(19), first_name varchar2(255), gender varchar2(255), last_name varchar2(255), booking_id number(19));
+---------------------------------------------------------------------------------------------------------------
+Example:-
+-----------------
+create table mphasis223(rollno number,name varchar2(30),address varchar2(30),
+phy number,chem number,maths number);
 
---------------------------------------------------------------------------------------------------------
+insert into mphasis223 values(101,'sandip','hyd',88,44,55);
+insert into mphasis223 values(102,'madhu','hyd',84,64,55);
+insert into mphasis223 values(103,'sunil','hyd',81,74,55);
+insert into mphasis223 values(104,'Kunal','hyd',82,54,55);
+insert into mphasis223 values(105,'sumeet','hyd',38,64,55);
+
+insert into mphasis223(name,rollno,maths,address,phy,chem) values('Kiran',106,58,'bangalore',44,55);
+
+select * from mphasis223;
+
+alter table mphasis223 add tot number;
+
+alter table mphasis223 add avg number;
+
+alter table mphasis223 add grade varchar2(30);
+
+update mphasis223 set tot=phy+chem+maths where rollno in (101,102,103,104,105,106);
+
+update mphasis223 set avg=tot/3 where rollno in (101,102,103,104,105,106);
+
+update mphasis223 set avg=round(tot/3,2) where rollno in (101,102,103,104,105,106);
+
+update mphasis223 set grade='First Division' where avg between 60 and 100; 
+
+update mphasis223 set grade='Second Division' where avg between 50 and 59; 
+-------------------------------------------------------------------------------------------
 
 
 
