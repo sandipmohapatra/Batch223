@@ -182,4 +182,34 @@ create table salary223(empno number references emp223,salary number(9,2),address
 
 select a.empno, a.name, a.phoneno, a.age, b.salary, b.address from emp223 a,salary223 b where a.empno=b.empno;
 -----------------------------------------------------------------------------------------------------------
+Data types:-
+-----------------
+1)number :- size is 38 digits,number(10),number(8,2);
+2)char :- size is 2000 characters,char(20);
+3)varchar :- size is 2000 characters
+4)varchar2():- the size is 4000 characters.
+5)date :- 7 bytes -'12-apr-2022'
+6)long :- 2GB
+7)raw :- store binary data size is 2000 bytes
+8)long raw:- 2 GB
+9)LOB :- 4 GB
+--------------------------------------------------------------------------------- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
