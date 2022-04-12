@@ -166,8 +166,13 @@ insert into emp223 values(103,'sandip',7544866555,19);
 select * from emp223;
 --------------------------------------------------------------------------------------------------------------
 
+create table salary223(empno number references emp223,salary number(9,2),address varchar2(30));
+insert into salary223 values(104,15890.44,'bangalore');
+--------------------------------------------------------------------------------------------------------
+1)the empno is referencing to emp223 empno.
+2)if we don't have empno in emp223 then we cannot have or insert into empno of salary223.
+3) Here emp223 is the parent table and salary223 is the child table.
+4)if the data is present in the child table we cannot delete from the parent table and make the child orfane.
 
-
-
-
+----------------------------------------------------------------------------------------------------------------
 
