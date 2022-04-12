@@ -152,9 +152,19 @@ age be greater than 18 to vote.
 Bank (accno,name,balance)----accno--1,2,3,4,5,6,7
 Bankcustomer(accno,address,phoneno,trans)-----accno ref to bank accno.
 ----------------------------------------------------------------------------------------------------------
+* The difference between unique key and primary key is that  we cannot leave the field empty in primary key where are in unique we can leave the field empty.
+-----------------------------------------------------------------------------------------------------------------  
 
+create table emp223(empno number primary key, name varchar2(30) not null, phoneno number unique,age number check(age >=18));
 
+insert into emp223 values(101,'sandip',7787866554,19);
 
+insert into emp223 values(102,'sandip',7544866554,19);
+
+insert into emp223 values(103,'sandip',7544866555,19);
+
+select * from emp223;
+--------------------------------------------------------------------------------------------------------------
 
 
 
