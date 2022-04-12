@@ -200,7 +200,11 @@ desc emp223
 2)to modify the column
 alter table emp223 modify name varchar2(40);
  
+3)to rename the column
+alter table emp223 rename column name to empname;
 
+4)to rename the table
+alter table emp223 rename to emp224;
 
 
 
