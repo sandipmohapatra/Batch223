@@ -193,7 +193,13 @@ Data types:-
 7)raw :- store binary data size is 2000 bytes
 8)long raw:- 2 GB
 9)LOB :- 4 GB
---------------------------------------------------------------------------------- 
+---------------------------------------------------------------------------------
+1)to discribe the table
+desc emp223
+
+2)to modify the column
+alter table emp223 modify name varchar2(40);
+ 
 
 
 
