@@ -242,8 +242,37 @@ select avg(salary),dept from emp223 group by dept;
 select min(salary),dept from emp223 group by dept;
 select max(salary),dept from emp223 group by dept;
 ----------------------------------------------------------------------------------------
+Assignment-2
+------------------------------
+create table register (id number primary key, firstname 
+varchar2(100), lastname varchar2(100) DOB varchar2(100), 
+gender, phone number, email varchar2(100), username 
+varcha2(100), password varchar2(100), confirmpassword 
+varchar2(100));
+
+insert rows.
+
+Create table course(Id number primary key, cfile varchar2(100) ,course_des 
+varchar2(100), course_fees number, course_name varchar2(100));
+
+insert rows
+
+Create table Feedback (id number primary key, messege varchar2(100), subject 
+varchar2(100), user_email varchar2(100), user_name varchar2(100));
 
 
+insert rows
+
+Create table enroll(id number primary key, cfile varchar2(100), course_des 
+varchar2(100), course_fees varchar2(100), course_name varchar2(100), username varchar2(100))
+
+insert rows
+---------------------------------------------------------------------------------
+create a employee table 
+empno,name,designation,salary,ta,da,hra,itax,gross;(gross should be automatically calculated)
+
+gross=(salary+ta+da+hra)-itax;
+---------------------------------------------------------------------------------------------------
 
 
 
