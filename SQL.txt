@@ -136,6 +136,22 @@ update mphasis223 set grade='First Division' where avg between 60 and 100;
 
 update mphasis223 set grade='Second Division' where avg between 50 and 59; 
 -------------------------------------------------------------------------------------------
+Constrains:-
+-----------------------
+1)primary key :-If we declare the column as primary key we cannot enter duplicate value nor we can keep the column empty.It is a combination of not null and unique.
+
+2)not null:-If we declare the column as not null we cannot leave the column empty.
+
+3)unique:- If we declare the column as unique we cannot enter duplicate values.
+
+4)check:- It is used to give the limitation to the column.
+Example:- marks should be greater than zero.
+age be greater than 18 to vote.
+ 
+5)foreign key:- It is a reference key to a primary key column of another table.
+Bank (accno,name,balance)----accno--1,2,3,4,5,6,7
+Bankcustomer(accno,address,phoneno,trans)-----accno ref to bank accno.
+----------------------------------------------------------------------------------------------------------
 
 
 
