@@ -206,6 +206,43 @@ alter table emp223 rename column name to empname;
 4)to rename the table
 alter table emp223 rename to emp224;
 
+5)to drop a table or delete a table;
+drop table emp223;
+
+6)to remove all the rows from the table
+truncate table emp223;
+-------------------------------------------------------------------------------------------
+7)to display the unique record
+select distinct empname from emp224;
+
+8)to display data in ascending or descending order
+select * from emp224 order by empname asc;
+select * from emp224 order by empname desc;
+select * from emp224 order by empname;
+-------------------------------------------------------------------------------------
+Group By function
+---------------------------------
+we have 3 groups 
+1)developer
+2)tester
+3) support
+-----------------------
+create table emp223(empono number,name varchar2(30),salary number,dept varchar2(30));
+
+insert into emp223 values(103,'Kiran',42000,'dev');
+
+insert into emp223 values(109,'aman',22000,'support');
+
+----------------------------------------------------------
+group by function
+-------------------------
+select count(empono),dept from emp223 group by dept;
+select sum(salary),dept from emp223 group by dept;
+select avg(salary),dept from emp223 group by dept;
+select min(salary),dept from emp223 group by dept;
+select max(salary),dept from emp223 group by dept;
+----------------------------------------------------------------------------------------
+
 
 
 
