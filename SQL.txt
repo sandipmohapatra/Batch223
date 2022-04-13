@@ -311,6 +311,8 @@ String function
 
 10)select trim ('m' from 'mmphasis studentm') from dual;
 
+11)select UPPER('My name is sandip') FROM DUAL;
+
 ---------------------------------------------------
 Arithmatic operations
 ---------------------------------
@@ -329,13 +331,45 @@ Arithmatic operations
 7)select cos(0) from dual;
 
 8)select tan(0) from dual;
+-------------------------------------------------------------------------
+Operations
+------------------
+1)TL (Transaction language) -select
 
-9)
+2)DML (data manipulation language) :- insert,update,delete
+These are temporary operations.If we rollBack it will undo the changes.
 
+3)DCL (data control language) :- grant,revoke
 
+4)DDL (data defination language) :- create,alter,drop
 
+5)TCL (Transaction control language) :- commit,rollback,savepoint.
+-----------------------------------------------------------------------------------------------------
+set linesize 1000
 
+commit :- to save the data.
+rollback :-to undo the data.
+cl scr :- to clear the screen. 
+----------------------------------------------------------------------------
+show user;
+to create user
+---------------------------
+create user bobin identified by bobin;
+-------------------------------------------
+connect to system/1234 then grant permission
+and revoke the permission
+---------------------------------------------
+grant dba to bobin;
+revoke dba from bobin;
+----------------------------------------------------
+from other users we can view tables using username.tablename
+select * from bobin.emp;
+-----------------------------------------------------------
 
+to drop the user
+drop user bobin;
+drop user bobin cascade;
+------------------------------------------------
 
 
 
