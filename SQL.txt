@@ -242,6 +242,22 @@ select avg(salary),dept from emp223 group by dept;
 select min(salary),dept from emp223 group by dept;
 select max(salary),dept from emp223 group by dept;
 ----------------------------------------------------------------------------------------
+having
+---------------
+select count(empono),dept from emp223 group by dept;
+
+select count(empono),dept from emp223 group by dept having min(salary) >=25000;
+
+select count(empono),dept from emp223 group by dept having max(salary) >=50000;
+
+select dept from emp223 group by dept having min(salary) >=25000;
+
+select dept from emp223 group by dept having max(salary) >=50000;
+
+select max(salary),dept from emp223 group by dept having max(salary) >=50000;
+
+select min(salary),dept from emp223 group by dept having max(salary) <=50000;
+-----------------------------------------------------------------------------------------------------------------------------
 Assignment-2
 ------------------------------
 create table register (id number primary key, firstname 
@@ -273,6 +289,32 @@ empno,name,designation,salary,ta,da,hra,itax,gross;(gross should be automaticall
 
 gross=(salary+ta+da+hra)-itax;
 ---------------------------------------------------------------------------------------------------
+String function
+--------------------------
+1)select concat('mphasis',' students') as combintedString from dual;
+
+2)select concat('mphasis',' students') from dual;
+
+3)select substr('mphasis students',1,5) as partString from dual;
+
+4)select substr('mphasis students',2,5) as partString from dual;
+
+5)select length('mphasis students') from dual;
+
+6)select instr('mphasis students','s') from dual;//it will display the first position of the 's' 
+
+7)select lpad('mphasis students',20,'*')from dual;//the length is 16 so remain there will be 4 stars.
+
+8)select rpad('mphasis students',20,'*')from dual;
+
+9)select trim ('m' from 'mphasis students') from dual;//trim will cut the heading and tailing characters or space both sides.
+
+10)select trim ('m' from 'mmphasis studentm') from dual;
+
+---------------------------------------------------
+Arithmatic operations
+---------------------------------
+1)
 
 
 
