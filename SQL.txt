@@ -314,9 +314,23 @@ String function
 ---------------------------------------------------
 Arithmatic operations
 ---------------------------------
-1)
+1)select round(45.443423343,2) from dual;
 
+2)select round(45.4474233,2) from dual;//if 3rd place greater than or equal to 5 then 1 will be added to the previous no 
 
+3)select mod(15,2) from dual;//modulus or remainder
+
+4)select abs(-10) from dual;
+
+5)select floor(12.90) from dual;//lower end value
+
+6)select ceil(12.90) from dual;//higher end value
+
+7)select cos(0) from dual;
+
+8)select tan(0) from dual;
+
+9)
 
 
 
