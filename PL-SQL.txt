@@ -1,0 +1,46 @@
+PL-SQL
+---------------
+Programming Language-structure querry language
+----------------------------------------------------------------
+declare ---It is used to declare the variables
+begin---In this we write the logic 
+end----This is the end of the program
+----------------------
+example-1
+----------------
+declare
+a number:=10;
+b number:=20;
+c number;
+begin
+c:=a+b;
+dbms_output.put_line('The result is '||c);
+end;
+---------------------------------------------
+Taking input from user
+---------------------------------
+a number;
+b number;
+c number;
+begin
+a:=:a;
+b:=:b;
+c:=a+b;
+dbms_output.put_line('The result is '||c);
+end;
+----------------------------------------------------------------------
+greatest of 2 no
+-------------------------
+declare
+a number;
+b number;
+begin
+a:=:a;
+b:=:b;
+if(a>b)then
+dbms_output.put_line('The greatest is '||a);
+else
+dbms_output.put_line('The greatest is '||b);
+end if;
+end;
+-----------------------------------------------------------
