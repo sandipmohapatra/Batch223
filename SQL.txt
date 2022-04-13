@@ -381,9 +381,18 @@ It is used to store date in the database .we can add or substract numbers from t
 5)select sysdate+4 from dual;
 6)select sysdate-5 from dual;
 7)select last_day('02-july-2022') from dual;
-
-
-
+8)select next_day('13-apr-2022','wed') from dual;
+9)select to_char(sysdate,'DD Month yy') from dual;
+10)select to_char(sysdate,'DD Month yy') from dual;
+11)select to_char(sysdate,'DD Mon yy') from dual;
+12)select to_char(sysdate,'DD Month yy hh:mi') from dual;
+13)select to_char(sysdate,'DD Mon yy hh:mi:ss') from dual;
+14)select to_char(sysdate,'Day') from dual;
+15)select to_char(sysdate,'Month') from dual;
+16)select to_char(sysdate,'year') from dual;
+17)select to_char(sysdate,'yy') from dual;
+18)select to_char(sysdate,'yyyy') from dual;
+------------------------------------------------------------------------------------------------
 
 
 
