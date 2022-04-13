@@ -393,9 +393,25 @@ It is used to store date in the database .we can add or substract numbers from t
 17)select to_char(sysdate,'yy') from dual;
 18)select to_char(sysdate,'yyyy') from dual;
 ------------------------------------------------------------------------------------------------
-
-
-
+clone a table
+------------------------
+create table emp225 as select * from emp223;
+insert into emp225 values(111,'simon',35660,'support');
+--------------------
+differece between emp223 and emp225
+--------------------------------------------
+select * from emp225 minus select * from emp223;
+---------------------------------------------------------------------
+common in emp223 and emp225
+---------------------------------------------
+select * from emp225 intersect select * from emp223;
+-------------------------------------------------------------------------
+common and uncommon in emp223 and emp225
+select * from emp225 union select * from emp223;
+-----------------------------------------------------------------------------
+all the rows in emp223 and emp225
+select * from emp225 union all select * from emp223;
+-------------------------------------------------------------------------------
 
 
 
