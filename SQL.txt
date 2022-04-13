@@ -370,6 +370,38 @@ to drop the user
 drop user bobin;
 drop user bobin cascade;
 ------------------------------------------------
+Date Function
+---------------------------
+It is used to store date in the database .we can add or substract numbers from the date.
+
+1)select sysdate from dual;
+2)select last_day(sysdate) from dual;
+3)select months_between('13-oct-2022','13-apr-2022') from dual;
+4)select sysdate+1 from dual;
+5)select sysdate+4 from dual;
+6)select sysdate-5 from dual;
+7)select last_day('02-july-2022') from dual;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
