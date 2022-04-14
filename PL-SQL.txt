@@ -73,11 +73,48 @@ dbms_output.put_line('The greatest is :'||c);
 end if;
 end;
 ---------------------------------------------------------------------------
-
-
-
-
-
+declare
+a number;
+b number;
+c number;
+begin
+a:=:a;
+b:=:b;
+c:=:c;
+if(a>b and a>c)then
+dbms_output.put_line('The greatest is :'||a);
+elsif(b>a and b>c)then
+dbms_output.put_line('The greatest is :'||b);
+else
+dbms_output.put_line('The greatest is :'||c);
+end if;
+end;
+----------------------------------------------------------------------------------------
+case-when
+-----------------------------
+Declare
+a number;
+b number;
+c number;
+opt varchar2(20);
+begin
+a:=:a;
+b:=:b;
+opt:=:opt;
+case
+when opt='add'
+then dbms_output.put_line('The sum is :'||(a+b)); 
+when opt='sub'
+then dbms_output.put_line('The sub is :'||(a-b)); 
+when opt='mul'
+then dbms_output.put_line('The mul is :'||(a*b)); 
+when opt='div'
+then dbms_output.put_line('The div is :'||(a/b)); 
+else
+dbms_output.put_line(' Wrong Input: ');
+end case;
+end;
+-------------------------------------------------------------------------------------------------
 
 
 
