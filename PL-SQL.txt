@@ -197,7 +197,16 @@ end;
 select * from circle223;
 -------------------------------------------------------------------
 
-
+example-1
+------------------
+begin
+update emp223 set salary=55000 where empono=101;
+update emp223 set salary=54000 where empono=102;
+update emp223 set salary=53000 where empono=103;
+insert into emp223 values(113,'tom',32000,'dev');
+insert into emp223 values(114,'jerry',22000,'dev');
+end;
+--------------------------------------------------------------------------------------------
 
 
 
