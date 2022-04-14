@@ -163,6 +163,44 @@ dbms_output.put_line(' Fail: ');
 end case;
 end;
 --------------------------------------------------------------------------------------------------
+loops
+-------------------
+declare
+i number;
+begin
+for i in 1..10 loop
+dbms_output.put_line(i);
+end loop;
+end;
+---------------------------------------------------
+declare
+i number;
+begin
+for i in reverse 1..10 loop
+dbms_output.put_line(i);
+end loop;
+end;
+-------------------------------------------------------------
+create table circle223(radius number,area number);
+----------------------------------------------------------------
+declare
+pi constant number:=3.14;
+radius number;
+area number;
+begin
+for radius in 5..10 loop
+area:=pi*power(radius,2);
+insert into circle223 values(radius,area);
+end loop;
+end;
+---------------------------------------------------------------------------------
+select * from circle223;
+-------------------------------------------------------------------
+
+
+
+
+
 
 
 
