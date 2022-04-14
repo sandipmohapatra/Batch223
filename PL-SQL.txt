@@ -207,8 +207,16 @@ insert into emp223 values(113,'tom',32000,'dev');
 insert into emp223 values(114,'jerry',22000,'dev');
 end;
 --------------------------------------------------------------------------------------------
-
-
+Declare
+name varchar2(30) not null:='Kunal';
+surname name%type :='Kumar';
+address emp223.dept%type:='Bangalore';
+begin
+dbms_output.put_line(' name is :'||name);
+dbms_output.put_line(' surname is :'||surname); 
+dbms_output.put_line(' address is :'||address);
+end;
+-------------------------------------------------------------------------------------------
 
 
 
