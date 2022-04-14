@@ -95,7 +95,6 @@ case-when
 Declare
 a number;
 b number;
-c number;
 opt varchar2(20);
 begin
 a:=:a;
