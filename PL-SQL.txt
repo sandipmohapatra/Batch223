@@ -217,6 +217,25 @@ dbms_output.put_line(' surname is :'||surname);
 dbms_output.put_line(' address is :'||address);
 end;
 -------------------------------------------------------------------------------------------
+function :- There are two types of functions
+1)user-defined function 
+2)pre-defined function:- String function,math function.
+
+----------------------------------------------------------------------------------------
+Example-1
+-----------------------
+create or replace function addno(i number,j number)return number is
+begin
+return i+j;
+end;
+-----------------------------------------------------------
+declare
+a number;
+begin
+a:=addno(10,20);
+dbms_output.put_line('The sum is'||a);
+end; 
+---------------------------------------------------------------------------------------------
 
 
 
