@@ -287,6 +287,32 @@ dbms_output.put_line('The div is: '||f);
 end; 
 ----------------------------------------------------------------------------------------------
 
+Example-3
+------------------
+create or replace function design(salary number) return varchar2 is
+begin
+if(salary >=50000)then
+return 'CEO';
+elsif(salary >=40000)then
+return 'Manager';
+elsif(salary >=30000)then
+return 'Officer';
+elsif(salary >=20000)then
+return 'Worker';
+else
+return 'Helper';
+end if;
+end;
+---------------------------------------------------------------------------
+select design(45000) from dual;
+-------------------------------------------------------------------------------
 
 
-
+------------------Assignment-3-------------------------------------------------------
+1)wap to enter a radius and find the area of the circle using function.
+2)wap to enter principle amount ,time,rate and find simple interest using function.
+si=(p*t*r)/100;
+3)wap to enter a number and find even or odd uusing function.
+4)Create a bank table(accno,name,balance) and insert the data into the table using PL-SQL.
+5)Create a employee table (empno,name,salary,designation ) and delete designation-manager from the table. 
+-------------------------------------------------------------------------------------------------------------------------------
