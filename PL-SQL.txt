@@ -236,13 +236,56 @@ a:=addno(10,20);
 dbms_output.put_line('The sum is'||a);
 end; 
 ---------------------------------------------------------------------------------------------
-
-
-
-
-
-
-
+declare
+i number;
+j number;
+c number;
+begin
+i:=:i;
+j:=:j;
+c:=addno(i,j);
+dbms_output.put_line('The sum is: '||c);
+end; 
+------------------------------------------------------------------------------------
+Example-2
+----------------------
+create or replace function addno(i number,j number)return number is
+begin
+return i+j;
+end;
+create or replace function subno(i number,j number)return number is
+begin
+return i-j;
+end;
+create or replace function mulno(i number,j number)return number is
+begin
+return i*j;
+end;
+create or replace function divno(i number,j number)return number is
+begin
+return i/j;
+end;
+----------------------------------------------------------------------
+declare
+i number;
+j number;
+c number;
+d number;
+e number;
+f number;
+begin
+i:=:i;
+j:=:j;
+c:=addno(i,j);
+d:=subno(i,j);
+e:=mulno(i,j);
+f:=divno(i,j);
+dbms_output.put_line('The sum is: '||c);
+dbms_output.put_line('The sub is: '||d);
+dbms_output.put_line('The mul is: '||e);
+dbms_output.put_line('The div is: '||f);
+end; 
+----------------------------------------------------------------------------------------------
 
 
 
