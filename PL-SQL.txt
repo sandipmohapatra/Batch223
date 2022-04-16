@@ -310,9 +310,48 @@ select design(45000) from dual;
 
 ------------------Assignment-3-------------------------------------------------------
 1)wap to enter a radius and find the area of the circle using function.
+
+principal -1000
+time-2 years
+rate-10%
+si=(p*t*r)/100;
 2)wap to enter principle amount ,time,rate and find simple interest using function.
 si=(p*t*r)/100;
-3)wap to enter a number and find even or odd uusing function.
+3)wap to enter a number and find even or odd using function.
 4)Create a bank table(accno,name,balance) and insert the data into the table using PL-SQL.
 5)Create a employee table (empno,name,salary,designation ) and delete designation-manager from the table. 
 -------------------------------------------------------------------------------------------------------------------------------
+select * from emp223
+
+declare
+empno emp223.empono%type;
+name emp223.name%type;
+salary emp223.salary%type;
+dept emp223.dept%type;
+begin
+empno:=:empno;
+name:=:name;
+salary:=:salary;
+dept:=:dept;
+insert into emp223 values(empno,name,salary,dept);
+end;
+-----------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
