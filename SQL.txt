@@ -530,12 +530,34 @@ end;
 ------------------------------------------------------------------------------------------------------
 select * from duptest;
 ---------------------------------------------
+joins
+-------------
+1)inner join,eqi-join
+2)outer join --left and right
+3)non-equi join
+4)self join
+---------------------------------------------------------------
+example-1
+------------------
+create table emp223(empono number,name varchar2(30),salary number,dept varchar2(30));
+create table dept223(dept varchar2(30),loc varchar2(30),project varchar2(20))
+------------------------------------------
+insert into dept223 values('tester','chennei','abc');
+insert into dept223 values('support','bangalore','def');
+insert into dept223 values('dev','hyd','ghi');
+insert into dept223 values('manager','hyd','ghi');
 
+1)select a.empono,a.name,a.salary,a.dept,b.loc,b.project from emp223 a,dept223 b where a.dept=b.dept;
 
+2)left outer join
+select a.empono,a.name,a.salary,a.dept,b.loc,b.project from emp223 a,dept223 b where a.dept(+)=b.dept;
+right outer join
 
+3)select a.empono,a.name,a.salary,a.dept,b.loc,b.project from emp223 a,dept223 b where a.dept=b.dept(+);
 
+4)insert into emp223(empono,name,salary) values(128,'kunal',78000);
 
-
+---------------------------------------------------------------------------------
 
 
 
