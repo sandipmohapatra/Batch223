@@ -512,10 +512,24 @@ when NO_DATA_FOUND THEN
 dbms_output.put_line('Employee doesnot exist');
 end;
 ----------------------------------------------------------------------------------------
+DUP_VAL_ON_INDEX
+-------------------------------------------
+if we enter duplicate value in the primary key field then this error will display.
+------------------------------------------------------------------------------------------------------
+create table duptest(empno number primary key,name varchar2(30),address varchar2(30));
 
-
-
-
+insert into duptest values(101,'sandip','bangalore');
+------------------------------------------------------------------------------------------------
+begin
+insert into duptest values(102,'sunil','bangalore');
+dbms_output.put_line('1 row inserted');
+exception
+when DUP_VAL_ON_INDEX then
+dbms_output.put_line('primary key field cannot insert duplicate values');
+end;
+------------------------------------------------------------------------------------------------------
+select * from duptest;
+---------------------------------------------
 
 
 
