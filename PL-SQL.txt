@@ -367,7 +367,20 @@ begin
 add_no(3,4);
 end;
 -------------------------------------
-
+example-2
+--------------------
+create or replace procedure deldev is
+begin
+delete from emp223 where dept='dev';
+commit;
+end;
+--------------------------------
+begin
+deldev;
+end;
+--------------------------
+select * from emp223;
+------------------------------------------------
 
 
 
