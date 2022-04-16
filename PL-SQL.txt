@@ -321,21 +321,55 @@ si=(p*t*r)/100;
 4)Create a bank table(accno,name,balance) and insert the data into the table using PL-SQL.
 5)Create a employee table (empno,name,salary,designation ) and delete designation-manager from the table. 
 -------------------------------------------------------------------------------------------------------------------------------
+Example-1
+------------------------------------------------
 select * from emp223
 
 declare
-empno emp223.empono%type;
-name emp223.name%type;
-salary emp223.salary%type;
-dept emp223.dept%type;
+a emp223.empono%type;
+b emp223.name%type;
+c emp223.salary%type;
+d emp223.dept%type;
 begin
-empno:=:empno;
-name:=:name;
-salary:=:salary;
-dept:=:dept;
-insert into emp223 values(empno,name,salary,dept);
+a:=:a;
+b:=:b;
+c:=:c;
+d:=:d;
+insert into emp223 values(a,b,c,d);
 end;
 -----------------------------------------------------------------------------------------------
+
+declare
+a emp223.empono%type;
+b emp223.name%type;
+c emp223.salary%type;
+d emp223.dept%type;
+begin
+a:=:a;
+b:=:b;
+c:=:c;
+d:=:d;
+insert into emp223 values(a,b,c,d);
+end;
+-------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
