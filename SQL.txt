@@ -433,12 +433,43 @@ select * from emp223 where name like '_eter';
 underscore for single letter.
 % for multiple letters.
 ----------------------------------------------------- 
+Primary key:-It is applied to single column and we cannot enter duplicate records and live the field empty.
+Composite key :- It is applied to multiple columns and we cannot enter duplicate records
+---------------------------------------------------------------------------------------------------------------------
+create table empmph223(empid number not null,name varchar2(30) not null,address varchar2(30),
+primary key(empid,name));
+-----------------------------------------------------------------------------------------------------------------------   
+insert into empmph223 values(101,'sandip','Bangalore'); 
 
+insert into empmph223 values(101,'sai','Bangalore'); 
 
+insert into empmph223 values(101,'Kiran','Bangalore');
 
+insert into empmph223 values(102,'sandip','Bangalore');
+select * from empmph223;
 
+----------------------------------------------------------------------------------------------
+create table empmph224(empid number not null,name varchar2(30) not null,address varchar2(30),
+primary key(empid,name,address));
+-----------------------------------------------------------------------------------------------
+sequence:-
+--------------------
+rollno,accno,slno it will automatically incremented.We no need to insert data.
+we have 2 functions 1)nextVal 2)currVal.
 
+example:-
+-----------------
+1)create sequence seq223 increment by 1 start with 1; 
+create table demo223(empid number,name varchar2(30),address varchar2(30))
 
+insert into demo223 values(seq223.nextval,'sandip','bangalore');
+insert into demo223 values(seq223.nextval,'anil','bangalore');
+
+select * from demo223
+
+select seq223.nextval from dual;<--incrementt the value
+select seq223.currval from dual;<--display the current value.
+------------------------------------------------------------------------------------------
 
 
 
