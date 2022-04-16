@@ -381,9 +381,23 @@ end;
 --------------------------
 select * from emp223;
 ------------------------------------------------
-
-
-
+example-3
+-----------------------
+create or replace procedure insertdata(a number,b varchar2,c number,d varchar2)
+is 
+begin
+insert into emp223 values(a,b,c,d);
+end;
+-----------------------------------------------------------------
+begin
+insertdata(123,'sumeet',30000,'dev');
+insertdata(124,'rahul',31000,'dev');
+insertdata(125,'ajay',32000,'dev');
+insertdata(126,'anil',33000,'dev');
+end;
+--------------------------------------------------------------------
+select * from emp223;
+---------------------------------------------------------------------
 
 
 
