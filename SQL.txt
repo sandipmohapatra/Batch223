@@ -454,7 +454,7 @@ primary key(empid,name,address));
 -----------------------------------------------------------------------------------------------
 sequence:-
 --------------------
-rollno,accno,slno it will automatically incremented.We no need to insert data.
+rollno,accno,slno it will automatically increment.We no need to insert data.
 we have 2 functions 1)nextVal 2)currVal.
 
 example:-
@@ -467,12 +467,51 @@ insert into demo223 values(seq223.nextval,'anil','bangalore');
 
 select * from demo223
 
-select seq223.nextval from dual;<--incrementt the value
+select seq223.nextval from dual;<--increment the value
 select seq223.currval from dual;<--display the current value.
 ------------------------------------------------------------------------------------------
-
-
-
+Exception Handling
+-----------------------------------------------
+1)NO_DATA_FOUND
+2)ZERO_DIVIDE
+3)DUP_VAL_ON_INDEX
+-----------------------------------------------
+1) zero divide
+-------------------------
+declare
+n number;
+begin
+n:=10/0;
+dbms_output.put_line(n);
+exception
+WHEN ZERO_DIVIDE THEN
+dbms_output.put_line('you cannot enter zero as divisor');
+end;
+----------------------------------------------------------------------
+2)no data found
+-------------------------------
+declare
+eno number:=104;
+ename varchar2(30);
+begin
+select name into ename from emp223 where empono=eno;
+dbms_output.put_line('The name is '||ename);
+ exception
+when NO_DATA_FOUND THEN
+dbms_output.put_line('Employee doesnot exist');
+end;
+-------------------------------------------------------------------------
+declare
+eno number:=1004;
+ename varchar2(30);
+begin
+select name into ename from emp223 where empono=eno;
+dbms_output.put_line('The name is '||ename);
+ exception
+when NO_DATA_FOUND THEN
+dbms_output.put_line('Employee doesnot exist');
+end;
+----------------------------------------------------------------------------------------
 
 
 
