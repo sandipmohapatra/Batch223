@@ -412,8 +412,27 @@ select * from emp225 union select * from emp223;
 all the rows in emp223 and emp225
 select * from emp225 union all select * from emp223;
 -------------------------------------------------------------------------------
-
-
+like:-(wild card characters)
+----------------------------------------------------------------
+select * from emp223 where name like 'm%'
+select * from emp223 where name like 's%'
+starting letter is s and after that it can be anything.
+----------------------------------------------------------------
+select * from emp223 where name like '%n'
+starting letters are anything and last letter n.
+-----------------------------------------------------------------
+select * from emp223 where salary like '2%'
+select * from emp223 where salary like '3%'
+---------------------------------------------------------------
+select * from emp223 where name like '__t__';
+select * from emp223 where name like '__ter';
+select * from emp223 where name like 'pet__';
+select * from emp223 where name like 'pete_';
+select * from emp223 where name like '_eter';
+--------------------------------------------------------------------------------
+underscore for single letter.
+% for multiple letters.
+----------------------------------------------------- 
 
 
 
