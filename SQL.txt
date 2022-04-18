@@ -635,3 +635,43 @@ WHERE A.CustomerID <> B.CustomerID
 AND A.City = B.City
 ORDER BY A.City desc;
 --------------------------------------------------------------
+view
+------------
+view :- it stores complex querry
+
+create view abcd223 as SELECT A.CustomerName AS CustomerName1, B.CustomerName AS CustomerName2, A.City FROM Customer235 A, Customer235 B
+WHERE A.CustomerID <> B.CustomerID
+AND A.City = B.City
+ORDER BY A.City desc;
+
+
+select * from abcd223
+----------------------------------------------------------------------------------------
+view
+-------------------
+A view is a logical table based on a table or another view.
+a view contains no data of it's own .
+the table on which the view is based is known as base table.
+
+advantage :-
+1)views restrict access to data because the view can display selective columns from the table.
+2)views can be used to make simple queries to retrieve the results of complicated queries.
+3)one view can be used to retrieve data from several tables.
+
+1)Derives data from only one table or multiple table.
+2)can perform DML(data manupulation language insert,update,delete) operation
+
+example:-
+select * from emp223;
+
+----> create view yae as select empono,name,salary from emp223;
+
+select * from yae;
+
+delete from yae where empono=104;
+
+1)create view xyz as select empno,ename from emp where deptno=10;
+
+select * from xyz;
+
+-------------------------------------------------------------------------------------------------------
