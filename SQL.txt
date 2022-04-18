@@ -619,4 +619,19 @@ WHERE A.CustomerID <> B.CustomerID
 AND A.City = B.City
 ORDER BY A.City;
 ------------------------------------------------------------------------------------------------------------------------
-
+example-2
+--------------------
+create table customer235 (CustomerID number,CustomerName varchar2(30),ContactName varchar2(30),	
+Address varchar2(30),City varchar2(30),PostalCode number,Country varchar2(30))
+-----------------------------------------------------------------------------------------------------
+insert into customer235 values(101,'sandip','sandy','MG road','Bangalore',560054,'India');
+insert into customer235 values(102,'sunil','suni','MG road','Bangalore',560054,'India');
+insert into customer235 values(103,'sai','sai','MG road','Bangalore',660054,'India');
+insert into customer235 values(104,'samuel','sam','MG road','hyd',560054,'India');
+insert into customer235 values(105,'sai kumar','sai','MG road','hyd',660054,'India');
+----------------------------------------------------------------------------------------------------------------
+SELECT A.CustomerName AS CustomerName1, B.CustomerName AS CustomerName2, A.City FROM Customer235 A, Customer235 B
+WHERE A.CustomerID <> B.CustomerID
+AND A.City = B.City
+ORDER BY A.City desc;
+--------------------------------------------------------------
