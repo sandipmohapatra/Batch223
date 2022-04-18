@@ -454,12 +454,12 @@ cursor attributes:-
 
 2)%found:-to know whether the cursor pointer points to a valid row inside the cursor.we cannot fetch when no more rows available.return type is boolean.
 
-3)%notfound:-(same) 
+3)%notfound:-(reverse) 
 
 4)%rowcount:-it will retrieve the position of the pointer within the activeset .
 ------------------------------------------------------------------------------------------------------------
 declare
-cursor c is select ename from emp ;
+cursor c is select name from emp223 ;
 x varchar2(15);
 begin
 open c;
