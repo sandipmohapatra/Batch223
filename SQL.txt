@@ -558,9 +558,6 @@ right outer
 ------------------
 select a.empono,a.name,a.salary,a.dept,b.dept,b.loc,b.project from emp235 a,dept235 b where a.dept=b.dept(+);
 ---------------------------------------------------------------------------------------------
-3)non-equi join
-4)self join
----------------------------------------------------------------
 example-1
 ------------------
 create table emp223(empono number,name varchar2(30),salary number,dept varchar2(30));
@@ -582,6 +579,44 @@ right outer join
 4)insert into emp223(empono,name,salary) values(128,'kunal',78000);
 
 ---------------------------------------------------------------------------------
+3)non equijoins
+
+It is join between two tables where no columns are same in them. 
+
+create 2 tables
+---------------------------------------------------------
+Table emp245:-empno,name,sal
+create table emp245(empno number,name varchar2(30),sal number);
+insert into emp245 values(101,'sandip',45000);
+insert into emp245 values(102,'amit',35000);
+insert into emp245 values(103,'geeta',25000);
+insert into emp245 values(104,'Sunita',15000);
+select * from emp245;
+
+Table job245 :-job,low_sal,high_sal
+create table job245(job varchar2(30),low_sal number,high_sal number);
+
+insert into job245 values('manager',40000,50000) 
+insert into job245 values('supervisior',30000,40000) 
+insert into job245 values('worker',20000,30000) 
+insert into job245 values('clerk',10000,20000) 
+
+select e.name,e.sal,j.job from emp245 e, job245 j where e.sal between j.low_sal and j.high_sal;
 
 
+----------------------------------------------------------------------------------------------------------------------------
+4)self join
+------------------------
+create table customer235 (CustomerID number,CustomerName varchar2(30),ContactName varchar2(30),	
+Address varchar2(30),City varchar2(30),PostalCode number,Country varchar2(30))
+-----------------------------------------------------------------------------------------------------
+insert into customer235 values(101,'sandip','sandy','MG road','Bangalore',560054,'India');
+insert into customer235 values(102,'sunil','suni','MG road','Bangalore',560054,'India');
+insert into customer235 values(103,'sai','sai','MG road','Bangalore',660054,'India');
+----------------------------------------------------------------------------------------------------------------
+SELECT A.CustomerName AS CustomerName1, B.CustomerName AS CustomerName2, A.City FROM Customer235 A, Customer235 B
+WHERE A.CustomerID <> B.CustomerID
+AND A.City = B.City
+ORDER BY A.City;
+------------------------------------------------------------------------------------------------------------------------
 
