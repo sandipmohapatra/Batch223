@@ -532,8 +532,32 @@ select * from duptest;
 ---------------------------------------------
 joins
 -------------
-1)inner join,eqi-join
+1)inner join,eqi-join :-Both table should have one column common.
+example:-
+create table emp223(empono number,name varchar2(30),salary number,dept varchar2(30));
+create table dept223(dept varchar2(30),loc varchar2(30),project varchar2(20))
+*in this dept is common.
+----------------------
+select a.empono,a.name,a.salary,a.dept,b.loc,b.project from emp223 a,dept223 b where a.dept=b.dept;
+
+------------------------------------------------------------------------------
 2)outer join --left and right
+left outer
+------------------
+create table emp235(empono number,name varchar2(30),salary number,dept varchar2(30));
+insert into emp235 values(102,'kiran',25000,'tester');
+select * from emp235;
+
+create table dept235(dept varchar2(30),loc varchar2(30),project varchar2(20))
+insert into dept235 values('sales','Hydrabad','coca-cola')
+select * from dept235;
+
+select a.empono,a.name,a.salary,a.dept,b.dept,b.loc,b.project from emp235 a,dept235 b where a.dept(+)=b.dept;
+
+right outer
+------------------
+select a.empono,a.name,a.salary,a.dept,b.dept,b.loc,b.project from emp235 a,dept235 b where a.dept=b.dept(+);
+---------------------------------------------------------------------------------------------
 3)non-equi join
 4)self join
 ---------------------------------------------------------------
