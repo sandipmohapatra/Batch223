@@ -1,0 +1,27 @@
+<html>
+
+<style>
+</style>
+
+<body>
+</body>
+</html>
+
+--------------------------------------------------------
+Inside <style> tag we do the styling of the page.
+css:- cascading style sheet
+-------------------------------------------------- 
+h1
+{
+background-color:red;
+color:yellow;
+}
+---------------------------------
+h1 is known as the selector
+background-color:red; it known as declaration. 
+-----------------------------------------------
+There are 3 types of css
+1)internal css --it is used within a single page.
+2)external css--it is used for whole appliaction.
+3)inline css--it is used for a single line.
+------------------------------------------------------------------------------------
