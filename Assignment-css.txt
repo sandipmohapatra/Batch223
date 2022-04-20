@@ -1,0 +1,10 @@
+Hotel Management system using (HTML-CSS)
+------------------------------------
+1)register online
+2)book a table
+3)view the menu
+4)view the food items images with cost
+5)order the food
+6)pay the bill
+6)feedback
+-----------------------------------------------------------------
