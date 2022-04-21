@@ -23,8 +23,10 @@ else
 var withd=prompt("Enter amount to withdraw");
 document.write("The amount want to withdraw"+withd);
 document.write("<br>");
+
 if(parseInt(balance) > parseInt(withd))
 document.write("The Total Balace after withdraw is "+(parseInt(balance) - parseInt(withd)));
+
 else
 document.write("Sorry Insufficent Balance ");
 }
