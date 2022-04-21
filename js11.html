@@ -1,0 +1,43 @@
+<html>
+<script>
+function addno()
+{
+var a=prompt("Enter a no");
+var b=prompt("Enter a no");
+var c=parseInt(a)+parseInt(b);
+document.write("the sum is "+c);
+alert("The sum is "+c);
+}
+function subno()
+{
+var a=prompt("Enter a no");
+var b=prompt("Enter a no");
+var c=parseInt(a)-parseInt(b);
+document.write("the sub is "+c);
+alert("The sub is "+c);
+}
+function mulno()
+{
+var a=prompt("Enter a no");
+var b=prompt("Enter a no");
+var c=parseInt(a)*parseInt(b);
+document.write("the mul is "+c);
+alert("The mul is "+c);
+}
+function divno()
+{
+var a=prompt("Enter a no");
+var b=prompt("Enter a no");
+var c=parseInt(a)/parseInt(b);
+document.write("the div is "+c);
+alert("The div is "+c);
+}
+</script>
+
+<body>
+<input type=button value=Addno onclick=addno()>
+<input type=button value=Subno onclick=subno()>
+<input type=button value=Mulno onclick=mulno()>
+<input type=button value=Divno onclick=divno()>
+</body>
+</html>
