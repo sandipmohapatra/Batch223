@@ -1,0 +1,56 @@
+<html>
+<script>
+function fun()
+{
+var a=f1.t1.value;
+var b=f1.t2.value;
+var c=f1.t3.value;
+var d=f1.t4.value;
+var e=f1.t5.value;
+if(a=="")
+{
+alert("enter your name");
+f1.t1.focus();
+}
+else if(b=="")
+{
+alert("enter your password");
+f1.t2.focus();
+}
+else if(c=="")
+{
+alert("enter your email");
+f1.t3.focus();
+}
+else if(d=="")
+{
+alert("enter your Phoneno");
+f1.t4.focus();
+}
+else if(e=="")
+{
+alert("enter your address");
+f1.t5.focus();
+}
+else
+{
+f1.submit();
+alert("Data submitted successFully");
+}
+}
+</script>
+
+<body bgcolor=yellow>
+<h1><center>Student Registration page</center></h1><hr>
+<form action=second name=f1>
+<table>
+<tr><td>Enter your name<td><input type=text name=t1 size=20></tr>
+<tr><td>Enter your password<td><input type=password name=t2 size=20></tr>
+<tr><td>Enter your email<td><input type=text name=t3 size=20></tr>
+<tr><td>Enter your phoneno<td><input type=number name=t4 size=20></tr>
+<tr><td>Enter your address<td><textarea name=t5 cols=21 rows=5></textarea></tr>
+<tr><td><td><input type=button value=submit onclick=fun()></tr>
+</table>
+</form>
+</body>
+</html>
