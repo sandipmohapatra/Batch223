@@ -1,0 +1,32 @@
+<html>
+<script>
+var accno=prompt("enter your accno");
+var name=prompt("enter your name");
+var balance=prompt("enter your balance");
+document.write("My accno is "+accno);
+document.write("<br>");
+document.write("My name is "+name);
+document.write("<br>");
+document.write("My Balance is "+balance);
+document.write("<br>");
+var choice=prompt("enter your Choice (1.deposite ,2.withdraw)");
+if(choice==1)
+{
+var dip=prompt("Enter amount to deposite");
+document.write("The amount want to deposite"+dip);
+document.write("<br>");
+var tbal=parseInt(balance)+parseInt(dip);
+document.write("The Total Balance is"+tbal);
+}
+else
+{
+var withd=prompt("Enter amount to withdraw");
+document.write("The amount want to withdraw"+withd);
+document.write("<br>");
+if(parseInt(balance) > parseInt(withd))
+document.write("The Total Balace after withdraw is "+(parseInt(balance) - parseInt(withd)));
+else
+document.write("Sorry Insufficent Balance ");
+}
+</script>
+</html>
