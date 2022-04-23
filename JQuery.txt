@@ -26,6 +26,18 @@ $("p").hide();
 <p>Welcome to JQuery</p>
 <p>Welcome to JQuery</p>
 <p>Welcome to JQuery</p>
-<button id="hide">Hide</button>
+<button id="b1">Hide</button>
 </body>
 </html>
+-----------------------------------------------------------------------------------
+step 1:- add the JQuery library
+step 2:-write ready function
+$(document).ready(function()
+{
+});
+step 3:- DOM which you want to modify
+$("#b1").click(function()
+{
+$("p").hide(); <-DOM manipulation
+});
+---------------------------------------------------------
