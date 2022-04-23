@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function()
+{
+
+$("#b1").click(function(){
+$("h1,h2,p").hide();
+});
+
+$("#b2").click(function(){
+$("h1,h2,p").show();
+});
+});
+</script>
+</head>
+
+<body>
+<h1>Welcome to JQuery</h1>
+<h2>Welcome to JQuery</h2>
+<p>Welcome to JQuery</p>
+<p>Welcome to JQuery</p>
+<p>Welcome to JQuery</p>
+<button id="b1">Hide</button>
+<button id="b2">Show</button>
+</body>
+</html>
