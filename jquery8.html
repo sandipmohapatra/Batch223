@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js">
+</script>
+<script>
+if(localStorage)
+{
+$(document).ready(function()
+{
+$(".save").click(function(){
+var name=$("#t1").val();
+var add=$("#t2").val();
+
+localStorage.setItem("x",name);
+localStorage.setItem("y",add);
+});
+
+$(".access").click(function(){
+alert("Hi"+localStorage.getItem("x"));
+alert("your address is"+localStorage.getItem("y"));
+});
+});
+}
+</script>
+<style>
+
+</style>
+</head>
+<body>
+<label>Name:<input type=text id=t1></label><br><br>
+<label>Address:<input type=text id=t2></label><br><br>
+<button type="button" class="save">Save Data</button>
+<button type="button" class="access">Get Data</button>
+</body>
+</html>
