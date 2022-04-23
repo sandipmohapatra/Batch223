@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function()
+{
+
+$("#b1").click(function(){
+$("div").slideUp();
+});
+
+$("#b2").click(function(){
+$("div").slideDown();
+});
+});
+</script>
+<style>
+div
+{
+border:1px solid red;
+background-color:yellow;
+}
+</style>
+</head>
+
+<body>
+<div>
+<h1>Welcome to JQuery</h1>
+<h2>Welcome to JQuery</h2>
+<p>Welcome to JQuery</p>
+<p>Welcome to JQuery</p>
+<p>Welcome to JQuery</p>
+</div>
+<button id="b1">Slide Up</button>
+<button id="b2">Slide Down</button>
+</body>
+</html>
