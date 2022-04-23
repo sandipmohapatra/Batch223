@@ -1,0 +1,31 @@
+Jquery
+---------------
+1)Jquery is a small and lightweight javascript library
+2)Jquery can run on any platform.
+3)JQuery we have to write less and output is more.
+4)It is known for DOM manipulation.
+------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function()
+{
+$("#hide").click(function()
+{
+$("p").hide();
+});
+});
+</script>
+</head>
+
+<body>
+<p>Welcome to JQuery</p>
+<p>Welcome to JQuery</p>
+<p>Welcome to JQuery</p>
+<p>Welcome to JQuery</p>
+<button id="hide">Hide</button>
+</body>
+</html>
