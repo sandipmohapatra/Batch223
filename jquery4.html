@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function()
+{
+
+$("#b1").click(function(){
+$("#test1").append("Hello Student The text is Changed");
+});
+
+$("#b2").click(function(){
+$("#test2").append("Hello Student The text is Changed");
+});
+
+$("#b3").click(function(){
+$("#test3").append("<h1>Hello Student The text is Changed</h1>");
+});
+
+
+});
+</script>
+</head>
+
+<body>
+<p id="test1">Welcome to JQuery</p>
+<button id="b1">Click to Change</button>
+
+<p id="test2">Welcome to JQuery</p>
+<button id="b2">Click to Change</button>
+
+<p id="test3">Welcome to JQuery</p>
+<button id="b3">Click to Change</button>
+
+</body>
+</html>
