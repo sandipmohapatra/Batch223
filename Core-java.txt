@@ -38,6 +38,7 @@ i)arithmatic operator:- +,-,*,/,%(modules/reminder)
 ii)comparative operator:- <,>,<=,>=,==
 iii)assignment :-=,!=
 iv)bitwise :->>,<<
+v)logical operator:-&&,||
 3)ternary :- :,?
 ----------------------------------------------------------------------------
 we have 4 access specifier private,public,protected,default
@@ -58,7 +59,31 @@ public class First {
 	}
 }
 --------------------------------------------------------------
+example-2
+-------------------
+package org.sandip;
 
+public class First {
+
+	public static void main(String[] args) {
+byte a=10;
+short b=20;
+int c=30;
+long d=40;
+float e=45.34f;
+double f=67.44;
+char g='a';
+String h="apple";
+System.out.println("the value of a is "+a);
+System.out.println("the value of b is "+b);
+System.out.println("the value of c is "+c);
+System.out.println("the value of d is "+d);
+System.out.println("the value of e is "+e);
+System.out.println("the value of f is "+f);
+System.out.println("the value of g is "+ g +"The value of h is "+h);
+}
+}
+----------------------------------------------------------------------------------------------------------------------------------
 
 
 
