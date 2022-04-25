@@ -5,8 +5,12 @@ Features of java
 3)Java support multi-threading or multi-tasking.
 4)we can develop web-application,network application,standalone application and also mobile application.
 5)In java we have interface which support the concept of multiple inheritance.
-6)In java we have constructor but no destructor.There is auttomatic garbage clearance.
+6)In java we have constructor but no destructor.There is automatic garbage clearance.
 7)Java is a secured language .we have 4 access specifier private,public,protected,default.
+8)we have to save the by .java extention.
+9)In java the class name and file should be same.
+10)java is platform independent.It can execute in any o/s.When we compile the .java file it is converted to .class file.
+.class file is in byte code.  
 -----------------------------------------------------------------------------------------------------------------------
 Data types
 --------------------
@@ -25,4 +29,22 @@ Derived datatype
 2)array
 3)class
 ------------------------------------------------------
-  
+  Operator
+---------------------
+1)unary:-i++,++i,i--,--i;
+
+2)binary
+i)arithmatic operator:- +,-,*,/,%(modules/reminder)
+ii)comparative operator:- <,>,<=,>=,==
+iii)assignment :-=,!=
+iv)bitwise :->>,<<
+3)ternary :- :,?
+----------------------------------------------------------------
+we have 4 access specifier 
+
+
+
+
+
+
+
