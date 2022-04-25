@@ -256,6 +256,34 @@ default:System.out.println("wrong input");
 }
 }}
 ----------------------------------------------------------------
+example-11
+-----------------
+package org.sandip;
+import java.util.*;
+public class First {
+
+	public static void main(String[] args) 
+	{
+Scanner ob=new Scanner(System.in);
+System.out.println("enter 2 nos");
+int a=ob.nextInt();
+int b=ob.nextInt();
+System.out.println("Enter your choice 1.add,2.sub,3.mul,4.div");
+int x=ob.nextInt();
+switch(x)
+{
+case 1:System.out.println("The sum is "+(a+b));
+break;
+case 2:System.out.println("The subtraction is "+(a-b));
+break;
+case 3:System.out.println("The multiply is "+(a*b));
+break;
+case 4:System.out.println("The division is "+(a/b));
+break;
+default:System.out.println("wrong input");
+}
+}}
+------------------------------------------------------------------------------
 
 
 
