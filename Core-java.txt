@@ -115,6 +115,25 @@ System.out.println("the sum  is "+c);
 ---------------------------------------------------------------------------
 wap to enter 5 nos and find the sum and avg.
 ----------------------------------------------------------------------------
+package org.sandip;
+import java.util.*;
+public class First {
 
+	public static void main(String[] args) 
+	{
+Scanner ob=new Scanner(System.in);
+System.out.println("Enter 5 nos");
+int a=ob.nextInt();
+int b=ob.nextInt();
+int c=ob.nextInt();
+int d=ob.nextInt();
+int e=ob.nextInt();
+int sum=a+b+c+d+e;
+int avg=sum/5;
+System.out.println("the sum  is "+sum);
+System.out.println("the avg  is "+avg);
+	}
+}
+------------------------------------------------------------------------------
 
 
