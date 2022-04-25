@@ -319,7 +319,14 @@ public static void main(String[] args) {
 }
 
 ---------------------------------- 
-
+wap to enter employee data
+1)empno
+2)name
+3)salary
+4)designation
+5)dept
+and display the data.
+-------------------------------------------------------------
 
 
 
