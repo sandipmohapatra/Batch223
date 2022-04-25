@@ -205,7 +205,27 @@ else
 	}
 }
 ------------------------------------------------------------
+wap to enter your age and find if your eligible to vote.
+-------------------------------------------------------------------------
+Example-9
+-----------------------
+package org.sandip;
+import java.util.*;
+public class First {
 
+	public static void main(String[] args) 
+	{
+Scanner ob=new Scanner(System.in);
+System.out.println("Enter your age");
+int a=ob.nextInt();
+if(a>=18)
+System.out.println("your eligible to vote");
+else
+	System.out.println("your are not eligible to vote");
+	
+	}
+}
+------------------------------------------------------------------------
 
 
 
