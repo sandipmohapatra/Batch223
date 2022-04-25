@@ -165,7 +165,7 @@ public class First {
 	public static void main(String[] args) 
 	{
 Scanner ob=new Scanner(System.in);
-System.out.println("Enter 2 nos");
+System.out.println("Enter 3 nos");
 int a=ob.nextInt();
 int b=ob.nextInt();
 int c=ob.nextInt();
@@ -179,4 +179,34 @@ else
 	}
 }
 -------------------------------------------------------------------------
+Scanner ob=new Scanner(System.in);<---------taking input
+System.out.println("Enter 2 nos");<----------to display
+
+
+Scanner class we have methods to take input nextInt(),nextFloat(),nextByte()
+we have to import java.util.*; package when we want to use scanner class.
+------------------------------------
+Example-8
+------------------
+package org.sandip;
+import java.util.*;
+public class First {
+
+	public static void main(String[] args) 
+	{
+Scanner ob=new Scanner(System.in);
+System.out.println("Enter 1 nos");
+int a=ob.nextInt();
+if(a%2==0)
+System.out.println("the no is even");
+else
+	System.out.println("the no is  odd ");
+	
+	}
+}
+------------------------------------------------------------
+
+
+
+
 
