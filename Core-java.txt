@@ -284,6 +284,42 @@ default:System.out.println("wrong input");
 }
 }}
 ------------------------------------------------------------------------------
+class and object:-
+a class contains variables and methods.
+With object we can access the variables and methods of a class.
+An object is a reference pointer used for accessing the variables and methods of the class.
+-----------------------------------------------
+example-1
+-----------------
+package org.sandip;
+import java.util.*;
+public class First
+{
+int rollno;  //variables
+String name,address;
+void input()  //methods
+{
+	Scanner ob=new Scanner(System.in);
+	System.out.println("Enter rollno,name,address");
+	rollno=ob.nextInt();
+	name=ob.next();
+	address=ob.next();
+}
+void display()
+{
+	System.out.println("The rollno is "+rollno);
+	System.out.println("The name is "+name);
+	System.out.println("The address is "+address);
+	}
+public static void main(String[] args) {
+	First obj=new First();
+	obj.input();  //accessing the methods with the help of object
+	obj.display();
+}
+}
+
+---------------------------------- 
+
 
 
 
