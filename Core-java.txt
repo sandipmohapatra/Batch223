@@ -84,7 +84,18 @@ System.out.println("the value of g is "+ g +"The value of h is "+h);
 }
 }
 ----------------------------------------------------------------------------------------------------------------------------------
+example-3
+---------------------
+package org.sandip;
 
+public class First {
+
+	public static void main(String[] args) {
+int a=10,b=20,c=a+b;
+System.out.println("the sum  is "+c);
+	}
+}
+----------------------------------------------------------------
 
 
 
