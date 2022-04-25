@@ -156,4 +156,27 @@ System.out.println("the greatest  is "+b);
 	}
 }
 --------------------------------------------------------
+Example-7
+-------------------
+package org.sandip;
+import java.util.*;
+public class First {
+
+	public static void main(String[] args) 
+	{
+Scanner ob=new Scanner(System.in);
+System.out.println("Enter 2 nos");
+int a=ob.nextInt();
+int b=ob.nextInt();
+int c=ob.nextInt();
+if(a>b && a>c)
+System.out.println("the greatest  is "+a);
+else if(b>a && b>c)
+System.out.println("the greatest  is "+b);
+else
+	System.out.println("the greatest  is "+c);
+	
+	}
+}
+-------------------------------------------------------------------------
 
