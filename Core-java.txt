@@ -39,10 +39,25 @@ ii)comparative operator:- <,>,<=,>=,==
 iii)assignment :-=,!=
 iv)bitwise :->>,<<
 3)ternary :- :,?
-----------------------------------------------------------------
-we have 4 access specifier 
+----------------------------------------------------------------------------
+we have 4 access specifier private,public,protected,default
+-----------------------------------------------------------------------------
+1)private:- If we declare variable and methods as private we can access it within the class only.
+2)public:-If we declare variable and methods as public we can access it within the class ,outside the class and outside the package.
+3)protected:-If we declare variable and methods as protected we can access it within the class and also with in the child class.
+4)default:- If we declare variable and methods as default we can access it within the class,out side the class but not outside the package.
+------------------------------------------------------------------------------------------------------------------
+Example-1
+------------------------
+package org.sandip;
 
+public class First {
 
+	public static void main(String[] args) {
+		System.out.println("Welcome to java");
+	}
+}
+--------------------------------------------------------------
 
 
 
