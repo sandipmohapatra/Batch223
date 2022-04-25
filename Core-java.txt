@@ -327,7 +327,13 @@ wap to enter employee data
 5)dept
 and display the data.
 -------------------------------------------------------------
-
+wap to enter bank details (use case and switch)
+accno,name,balance
+enter 1.withdraw 2.deposite
+if withdraw less then balance.then final balance =balance-withdraw.
+if withdraw more then balance.then display message ("sorry cannot withdraw");
+for deposite final balnace =balance+deposite
+-----------------------------------------------------------------------------------------------------------
 
 
 
