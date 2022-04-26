@@ -659,6 +659,39 @@ void display()
 
 }
 ------------------------------------------------------------------------------------------------------------
+package org.inheritance;
+
+public class Customer extends Product 
+{
+	String cusname,address,emailid,phoeneno;
+
+	public Customer(int pid, String name, float price, String cusname, String address, String emailid,
+			String phoeneno)
+	{
+		super(pid, name, price);
+		this.cusname = cusname;
+		this.address = address;
+		this.emailid = emailid;
+		this.phoeneno = phoeneno;
+	}
+void display()
+{
+	super.display();
+	System.out.println("the customer name is "+cusname);
+	System.out.println("the customer address is "+address);
+	System.out.println("the customer email id is "+emailid);
+	System.out.println("the customer phoneno is "+phoeneno);
+	
+}
+	public static void main(String[] args) {
+Customer ob=new Customer(101,"Samsung TV",35000.45f,"sandip","bangalore","sandip@gmail.com","7766554433");
+Customer ob1=new Customer(102,"Samsung fridge",45000.45f,"sandip","bangalore","sandip@gmail.com","7766554433");
+		ob.display();
+		ob1.display();
+	}
+
+}
+--------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
