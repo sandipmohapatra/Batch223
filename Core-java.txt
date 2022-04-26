@@ -535,11 +535,69 @@ System.out.println("the sum of 2 nos are "+ob.sum(16, 26));
 }
 }
 -----------------------------------------------------------------------------------
+Inheritance :-It is one of the properties of Object Oriented Programing language.
+In this the child class will inherite the parent class variables and methods.
+We can reuse the parent class code in the child class and create a new version.
+Java support 1)single inheritance.2)multi-level inheritance 3)hyrarchal inheritance.
+we use the keyword super to access the parent class variables and methods.
+we use the keyword extends to inherite the parent class into the child class.
+we have to create object of the child class and access the variables and methods of the parent and child class both.
+*java does not support multiple and hybrid inhertance
+*multiple and hybrid inhertance we will do using interface.
+*first the super class constructor will execute then the child class constructor will execute.
+-----------------------------------------------------------------------------
 
+Polymerphisim
+Encalsulation
+Abstraction
+-------------------------------------------------------------------------------------
+example-1
+------------------------
+package org.inheritance;
 
+public class Student 
+{
+int rollno;
+String name,address;
+public Student(int rollno, String name, String address) {
+	this.rollno = rollno;
+	this.name = name;
+	this.address = address;
+}
+void display()
+{
+	System.out.println("the rollno is "+rollno);
+	System.out.println("the name is "+name);
+	System.out.println("the address is "+address);
+	}
+}
+---------------------------------------------------------------------------------------
+package org.inheritance;
 
+public class InheritanceDemo extends Student 
+{
+	int phy,chem,maths,total;
 
-
+	public InheritanceDemo(int rollno, String name, String address, int phy, int chem, int maths) {
+		super(rollno, name, address);
+		this.phy = phy;
+		this.chem = chem;
+		this.maths = maths;
+	}
+	void display()
+	{
+		super.display();
+		System.out.println("the physics marks is "+phy );
+		System.out.println("the chemistry marks is "+chem );
+		System.out.println("the maths marks is "+maths );
+		System.out.println("the total marks is "+(phy+chem+maths));
+				}
+public static void main(String[] args) {
+	InheritanceDemo ob=new InheritanceDemo(101,"sandip","bangalore",66,77,49);
+	ob.display();
+}
+}
+-------------------------------------------------------------------------------------------------------------
 
 
 
