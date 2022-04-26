@@ -598,8 +598,13 @@ public static void main(String[] args) {
 }
 }
 -------------------------------------------------------------------------------------------------------------
-
-
+amazon
+------------------
+parent---->Create a product class (pid,name,price)
+child ----->create a customer class inherite the product class (cusname,address,emailid,phoeneno);
+display the data.
+create object of the child class and display the data.
+----------------------------------------------------------------------------------------------------------
 
 
 
