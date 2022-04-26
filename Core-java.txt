@@ -446,6 +446,40 @@ public static void main(String[] args) {
 	}
 }
 ------------------------------------------------------------------------------------------------------
+wap using constructor to enter employee data and display it.
+empno,name,salary,design
+-------------------------------------------------------------------
+example-
+package org.sandip;
+import java.util.*;
+public class Employee 
+{
+int empno;
+String name,design,dept;
+float salary;
+Employee(int empno,String name,String design,String dept,float salary)
+{
+	this.empno=empno;
+	this.name=name;
+	this.design=design;
+	this.dept=dept;
+	this.salary=salary;
+}
+void display()
+{
+	System.out.println("The empno is "+empno);
+	System.out.println("The name is "+name);
+	System.out.println("The design is "+design);
+	System.out.println("The dept is "+dept);
+	System.out.println("The salary is "+salary);
+}
+public static void main(String[] args) 
+{
+Employee ob=new Employee(101,"sandip","officer","sales",7800.34f);
+ob.display();
+}
+}
+-----------------------------------------------------------------------------------------------------
 
 
 
