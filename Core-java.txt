@@ -480,6 +480,64 @@ ob.display();
 }
 }
 -----------------------------------------------------------------------------------------------------
+Difference between function and Constructor
+-----------------------------------------------------------------
+1)A function returns a value where as the constructor doesn't return a value.
+2)A function can have any name other than the class name.A constructor only have 
+the class name.
+3)For executing (n) no of function we require single object where as for excecuting a 
+single constructor we require single object.
+as many constructor that many objects are required.
+4)when we use the same function name more than one time it is known as function overloading.
+--------------------------------------------------------------------------------------------
+example-
+package org.sandip;
+import java.util.*;
+public class Employee 
+{
+int empno;
+String name,design,dept;
+float salary;
+Employee(int empno,String name,String design,String dept,float salary)
+{
+	this.empno=empno;
+	this.name=name;
+	this.design=design;
+	this.dept=dept;
+	this.salary=salary;
+}
+int sum(int a ,int b)
+{
+return a+b;
+}
+
+float sum(float a,float b)
+{
+	return a+b;
+}
+
+void display()
+{
+	System.out.println("The empno is "+empno);
+	System.out.println("The name is "+name);
+	System.out.println("The design is "+design);
+	System.out.println("The dept is "+dept);
+	System.out.println("The salary is "+salary);
+	
+}
+public static void main(String[] args) 
+{
+Employee ob=new Employee(101,"sandip","officer","sales",7800.34f);
+ob.display();
+System.out.println("the sum of 2 nos are "+ob.sum(6, 6));
+System.out.println("the sum of 2 nos are "+ob.sum(6.54f, 6.43f));
+System.out.println("the sum of 2 nos are "+ob.sum(16, 26));
+}
+}
+-----------------------------------------------------------------------------------
+
+
+
 
 
 
