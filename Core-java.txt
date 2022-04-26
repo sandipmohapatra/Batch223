@@ -410,7 +410,42 @@ public static void main(String[] args)
 }
 ----------------------------------------------------------------------------------------------
 Constructor :- It is a function which has the same name of that of the class name.
-It doesnot return any value nor 
+It doesnot return any value nor it has any return type.
+It execute automatically when an object is created for the class.
+there are 2 types of constructor
+1)default constructor
+2)parameterized constructor.
+--------------------------------------------------------------
+example-1
+-------------------
+package org.sandip;
+public class Student 
+{
+int rollno; //instance variable can be accessed through out the class.
+String name,address;
+Student()
+{
+	System.out.println("This is default constructor");
+}
+Student(int rollno,String name,String address)//local variables can be accessed within the function
+{
+	this.rollno=rollno; //to differentiate between the instance and local variables we use this keyword.
+	this.name=name;
+	this.address=address;
+}
+void display()
+{
+	System.out.println("the rollno is "+rollno);
+	System.out.println("the name is "+name);
+	System.out.println("the address is "+address);
+	}
+public static void main(String[] args) {
+	Student ob=new Student();
+	Student ob1=new Student(101,"sandip","Bangalore");
+	ob1.display();
+	}
+}
+------------------------------------------------------------------------------------------------------
 
 
 
