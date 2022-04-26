@@ -334,6 +334,42 @@ if withdraw less then balance.then final balance =balance-withdraw.
 if withdraw more then balance.then display message ("sorry cannot withdraw");
 for deposite final balnace =balance+deposite
 -----------------------------------------------------------------------------------------------------------
-
+example-1
+-------------------
+//wap to enter employee data 1)empno 2)name 3)salary 4)designation 5)dept and display the data.
+package org.sandip;
+import java.util.*;
+public class Employee 
+{
+int empno;
+String name,design,dept;
+float salary;
+void input()
+{
+	Scanner ob=new Scanner(System.in);
+	System.out.println("Enter empno,name,designation,dept and salary");
+	empno=ob.nextInt();
+	name=ob.next();
+	design=ob.next();
+	dept=ob.next();
+	salary=ob.nextFloat();
+}
+void display()
+{
+	System.out.println("The empno is"+empno);
+	System.out.println("The name is"+name);
+	System.out.println("The design is"+design);
+	System.out.println("The dept is"+dept);
+	System.out.println("The salary is"+salary);
+	
+}
+public static void main(String[] args) 
+{
+Employee ob=new Employee();
+ob.input();
+ob.display();
+}
+}
+----------------------------------------------------------------------------------------
 
 
