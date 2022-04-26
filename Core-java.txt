@@ -371,5 +371,63 @@ ob.display();
 }
 }
 ----------------------------------------------------------------------------------------
+example-2
+-------------------------
+package org.sandip;
+import java.util.*;
+public class Bank 
+{
+public static void main(String[] args) 
+{
+	Scanner ob=new Scanner(System.in);
+	System.out.println("Enter accno,name,Balance");
+	int accno=ob.nextInt();
+	String name=ob.next();
+	Float bal=ob.nextFloat();
+	System.out.println("Enter 1.Withdraw 2.deposite");
+	int choice=ob.nextInt();
+	switch(choice)
+	{
+	case 1:System.out.println("Enter amount to withdraw");
+	float withd=ob.nextFloat();
+	if(bal>withd)
+	{
+		bal=bal-withd;
+		System.out.println("The final balance is "+bal);
+	}
+	else
+		System.out.println("Sorry balance is less");
+	
+	break;
+	case 2:System.out.println("Enter amount to deposite");
+	float dip=ob.nextFloat();
+	bal=bal+dip;
+	System.out.println("The final balance is "+bal);
+	break;
+	default:System.out.println("wrong input");
+}
+}
+}
+----------------------------------------------------------------------------------------------
+Constructor :- It is a function which has the same name of that of the class name.
+It doesnot return any value nor 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
