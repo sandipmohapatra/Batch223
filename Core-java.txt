@@ -975,6 +975,37 @@ System.out.println("the empsalary is "+ob.getSalary());
 }
 }
 -------------------------------------------------------------------------------------
+static keyword
+-------------------------
+we can declare a variable as static.
+we can declare a method as static.
+we can declare a class as static.
+we can have static block .This block execute before the main method.
+We can access the static variables and methods without creating an object.
+This is because a single copy of variable or method is created in the JVM(java virtual machine).
+This is used for memory management.
+-----------------------------------------------------------------------------------------------------------------------------------
+example-1
+--------------------
+package org.inheritance;
+public class StaticDemo 
+{
+static int a=10,b=20;
+static void display()
+{
+	System.out.println("The is static method");
+}
+static
+{
+	System.out.println("This is static block");
+}
+public static void main(String[] args) {
+	display();
+	System.out.println("The value of a is "+a);
+	System.out.println("The value of b is "+b);
+	}
+}
+--------------------------------------------------------------------------------
 
 
 
