@@ -922,6 +922,59 @@ ob1.display();
 }
 }
 -----------------------------------------------------------------------------------
+Like constructor we have setter() and getter()
+------------------------------------------------------------------------------------
+package org.inheritance;
+
+public class Employee 
+{
+int empno;
+String name,address;
+float salary;
+public int getEmpno() {
+	return empno;
+}
+public void setEmpno(int empno) {
+	this.empno = empno;
+}
+public String getName() {
+	return name;
+}
+public void setName(String name) {
+	this.name = name;
+}
+public String getAddress() {
+	return address;
+}
+public void setAddress(String address) {
+	this.address = address;
+}
+public float getSalary() {
+	return salary;
+}
+public void setSalary(float salary) {
+	this.salary = salary;
+}
+}
+---------------------------------------------------------------------------
+package org.inheritance;
+
+public class MainClass1
+{
+public static void main(String[] args) 
+{
+Employee ob=new Employee();
+ob.setEmpno(101);
+ob.setName("Sandip");
+ob.setAddress("Bangalore");
+ob.setSalary(45000);
+System.out.println("the empno is "+ob.getEmpno());
+System.out.println("the empname is "+ob.getName());
+System.out.println("the empaddress is "+ob.getAddress());
+System.out.println("the empsalary is "+ob.getSalary());
+}
+}
+-------------------------------------------------------------------------------------
 
 
 
