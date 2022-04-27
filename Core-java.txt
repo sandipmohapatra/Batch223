@@ -813,7 +813,7 @@ so we have aggregation(has-a) relationship.
 example:- employee has a bank account
 house has a kitchen.
 --------------------------------------------------------------------------------------------------
-example:- employee has a address.
+example:- employee has a address.(employee class has a address class)
 ----------------------------------------------------------------------------------------
  example-1
 --------------------
@@ -866,8 +866,62 @@ public static void main(String[] args)
 }
 }
 ------------------------------------------------------------------------------------------------------
+wap to create a customer class(custname,address,bank)
+bank class (accno,branchname,balance)
+customer has a bank acc
+--------------------------------------------------------------------------------------
+package org.inheritance;
 
+public class Bank 
+{
+int accno,balance;
+String branchname;
+public Bank(int accno, int balance, String branchname) 
+{
+	this.accno = accno;
+	this.balance = balance;
+	this.branchname = branchname;
+}
+@Override
+public String toString() {
+	return "Bank [accno=" + accno + ", balance=" + balance + ", branchname=" + branchname + "]";
+}
 
+}
+-------------------------------------------------------------
+package org.inheritance;
+
+public class Cust
+{
+	String custname,address;
+	Bank bank;
+	public Cust(String custname, String address, Bank bank) 
+	{
+		this.custname = custname;
+		this.address = address;
+		this.bank = bank;
+	}
+	void display()
+	{
+		System.out.println("The Customer name is "+custname);
+		System.out.println("The Customer address is "+address);
+		System.out.println("The Bank details is "+bank);
+			}
+	
+}
+-------------------------------------------------------------------------------
+package org.inheritance;
+
+public class MainClass
+{
+public static void main(String[] args) 
+{
+Bank ob=new Bank(1001,5000,"SBI MG Road");
+Cust ob1=new Cust("Sandip","Bangalore",ob);
+ob1.display();
+}
+}
+-----------------------------------------------------------------------------------
 
 
 
