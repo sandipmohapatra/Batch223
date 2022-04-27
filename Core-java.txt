@@ -691,13 +691,122 @@ Customer ob1=new Customer(102,"Samsung fridge",45000.45f,"sandip","bangalore","s
 	}
 
 }
---------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
-
+------------------------------------------------Assignment-1---------------------------------------
+wap to create bank class details (using class and methods)
+bank class --- accno,name,balance
+call ---.withdraw()  deposite()
+if withdraw less then balance.then final balance =balance-withdraw.
+if withdraw more then balance.then display message ("sorry cannot withdraw");
+for deposite final balnace =balance+deposite
+-------------------------------------------------Assignment-2-------------------------------------------------------
+customer has 2 bank accounts---cname,address,phoneno,email
+ICICI bank ---accno,bank loc,balance
+SBI bank---accno,bank loc,balance
+display the customer+bank details
+*no withdraw or deposite
+----------------------------------------------Assignment-3------------------------------------------------
+Create a student class(rollno,name,address)---------------parent class
+create a PCM class(phy,chem,math,total)------------------child class
+create a PCB class(phy,chem,Bio,total)--------------------child class
+display the details of 2 students with total marks
+----------------------------------------------------------------------------
+example-1
+------------------
+package org.hyrarcal;
+import java.util.*;
+public class Student 
+{
+String rollno,name,address;
+void input()
+{
+	Scanner ob=new Scanner(System.in);
+	System.out.println("Enter rollno,name,address");
+	rollno=ob.nextLine();
+	name=ob.nextLine();
+	address=ob.nextLine();
+}
+void display()
+{
+	System.out.println("The rollno is "+rollno);
+	System.out.println("The name is "+name);
+	System.out.println("The aaddress is "+address);
+	}
+}
+--------------------------------------------------------------------------
+package org.hyrarcal;
+import java.util.*;
+public class PCM extends Student
+{
+float phy,chem,math,total;
+void input()
+{
+	super.input();
+	Scanner ob=new Scanner(System.in);
+	System.out.println("Enter phy,chem,math marks");
+	phy=ob.nextFloat();
+	chem=ob.nextFloat();
+	math=ob.nextFloat();
+}
+void display()
+{
+	super.display();
+	total=phy+chem+math;
+	System.out.println("Physics marks is "+phy);
+	System.out.println("Chemistry marks is "+chem);
+	System.out.println("Maths marks is "+math);
+	System.out.println("Total marks is "+total);
+		}
+}
+-----------------------------------------------------------
+package org.hyrarcal;
+import java.util.*;
+public class PCB extends Student
+{
+float phy,chem,bio,total;
+void input()
+{
+	super.input();
+	Scanner ob=new Scanner(System.in);
+	System.out.println("Enter phy,chem,bio marks");
+	phy=ob.nextFloat();
+	chem=ob.nextFloat();
+	bio=ob.nextFloat();
+}
+void display()
+{
+	super.display();
+	total=phy+chem+bio;
+	System.out.println("Physics marks is "+phy);
+	System.out.println("Chemistry marks is "+chem);
+	System.out.println("Biology marks is "+bio);
+	System.out.println("Total marks is "+total);
+		}
+}
+------------------------------------------------------------------------
+package org.hyrarcal;
+import java.util.*;
+public class MainClass 
+{
+public static void main(String[] args) 
+{
+Scanner ob=new Scanner(System.in);
+System.out.println("enter your Stream");
+String stream=ob.next();
+if(stream.equals("PCM"))
+{
+	PCM ob1=new PCM();
+	ob1.input();
+	ob1.display();
+}
+else
+{
+	PCB ob2=new PCB();
+	ob2.input();
+	ob2.display();
+}
+}
+}
+----------------------------------------------------------------------------------
 
 
 
