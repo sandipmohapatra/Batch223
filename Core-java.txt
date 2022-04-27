@@ -807,7 +807,65 @@ else
 }
 }
 ----------------------------------------------------------------------------------
+inheritance is known as (is-a) relationship.In this child class depend upon the parent class.If there is any error in the parent class the child class will not execute.So it is known as tight coupling.
+Java support loose coupling.
+so we have aggregation(has-a) relationship.
+example:- employee has a bank account
+house has a kitchen.
+--------------------------------------------------------------------------------------------------
+example:- employee has a address.
+----------------------------------------------------------------------------------------
+ example-1
+--------------------
+package org.hyrarcal;
 
+public class Address 
+{
+int roadno,streetno;
+String area,city,state;
+public Address(int roadno, int streetno, String area, String city, String state) 
+{
+	this.roadno = roadno;
+	this.streetno = streetno;
+	this.area = area;
+	this.city = city;
+	this.state = state;
+}
+@Override  //to covert object to string
+public String toString() {
+	return "Address [roadno=" + roadno + ", streetno=" + streetno + ", area=" + area + ", city=" + city + ", state="
+			+ state + "]";
+}
+
+}
+-----------------------------------------------------------------------------------------
+package org.hyrarcal;
+
+public class Employee
+{
+int empno;
+String name;
+Address address;
+public Employee(int empno, String name, Address address)
+{
+	this.empno = empno;
+	this.name = name;
+	this.address = address;
+}
+void display()
+{
+	System.out.println("the empno is "+empno);
+	System.out.println("the name is "+name);
+	System.out.println("the address is "+address);
+	}
+public static void main(String[] args)
+{
+	Address ob1=new Address(10,20,"MG road","Bangalore","Karnataka");
+	Employee ob2=new Employee(101,"sandip",ob1);
+	ob2.display();
+}
+}
+------------------------------------------------------------------------------------------------------
 
 
 
