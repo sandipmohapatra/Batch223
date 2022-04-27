@@ -1032,8 +1032,90 @@ public static void main(String[] args) {
 	}
 }
 ------------------------------------------------------------------------------
+//static variable once incremented remain incremented
 
+package org.inheritance;
+public class StaticDemo 
+{
+ static int a=10;
+static void display()
+{
+	System.out.println(a++);
+}
+static
+{
+	System.out.println("This is static block");
+}
+public static void main(String[] args) {
+	display();
+	display();
+	display();
+	display();
+	display();
+		}
+}
+----------------------------------------------------------------------------------------------------
+abstract:- We can declare a class as abstract,method as abstract.
+abstract means it is incomplete.so we have incomplete class ,incomplete method.
+If we declare class as abstract we cannot create object of that class.
+If we declare method as abstract we don't have method body we have to override the abstract method in the child class.
+and create object of the class class.
+-------------------------
+package org.inheritance;
 
+abstract class AbstractDemo1 
+{
+abstract void display();
+abstract void display1();
+}
+class AbstractDemo extends AbstractDemo1
+{
+
+	@Override
+	void display() {
+		System.out.println("This is display");		
+	}
+
+	@Override
+	void display1() {
+	System.out.println("This is display1");
+			}
+	public static void main(String[] args) {
+		AbstractDemo ob=new AbstractDemo();
+		ob.display();
+		ob.display1();
+	}
+}
+-----------------------------------------
+AWT :- abstract windowing toolkit
+TextBox() ---we have to override and give the dimention.
+-----------------------------------------------------
+package org.inheritance;
+
+abstract class AbstractDemo1 
+{
+abstract int sum(int a,int b);
+abstract float sum(float a,float b);
+}
+class AbstractDemo extends AbstractDemo1
+{
+	@Override
+	int sum(int a, int b) {
+				return a+b;
+	}
+
+	@Override
+	float sum(float a, float b) {
+				return a+b;
+	}
+	public static void main(String[] args) {
+		AbstractDemo ob=new AbstractDemo();
+	System.out.println("The sum is "+ob.sum(4, 5));
+	System.out.println("The sum is "+ob.sum(4.5f, 5.4f));
+	System.out.println("The sum is "+ob.sum(14.5f, 15.4f));
+			}
+}
+----------------------------------------------------------------------------------------
 
 
 
