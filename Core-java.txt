@@ -1236,7 +1236,26 @@ cust.display();
 }
 }
 -----------------------------------------------------------------------------------------------------
-
+package HasADemo;
+import java.util.*;
+public class MainClass
+{
+public static void main(String[] args) 
+{
+	Scanner ob=new Scanner(System.in);
+	System.out.println("enter pid,price,pname");
+	int pid=ob.nextInt();
+	int ppr=ob.nextInt();
+	String pname=ob.next();
+Product p=new Product(pid,ppr,pname)	;
+Payment pay=new Payment(101,1100,35000,"ICICI","Sandip");
+Customer cust=new Customer("sandip","sandip@gmail.com","7766554433",pay,p);
+System.out.println("Final Customer Bill" );
+System.out.println("*********************************************");
+cust.display();
+}
+}
+------------------------------------------------------------------------------------------------------------------------------
 
 
 
