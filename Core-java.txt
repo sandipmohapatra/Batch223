@@ -1115,13 +1115,6 @@ class AbstractDemo extends AbstractDemo1
 	System.out.println("The sum is "+ob.sum(14.5f, 15.4f));
 			}
 }
-------------------------------------Amazon----------------------------------------------------
-wap to create a product class (pid,pname,price)
-create a customer class (custname,email,phoneno,Payment)
-create class Payment(accno,bankname,yourname,IFICI code,amount)
-Display the final bill:- should include pid,name,price,custname,email,phoneno,amount paid
-*customer has a payment
-*enter the values at runtime don't use constructor.
 ----------------------------------------------------------------------------------------------
 1)what is a entity?
 table
@@ -1151,6 +1144,14 @@ select only rows
 14)object oriented programming doesnot follow M:M relationship.(TRUE)
 15)DBMS-RBBMS follow how many codd rules?6 rules.
 ------------------------------------------------------------------------------------------------------------------ 
+------------------------------------Amazon----------------------------------------------------
+wap to create a product class (pid,pname,price)
+create a customer class (custname,email,phoneno,Payment)
+create class Payment(accno,bankname,yourname,IFICI code,amount)
+Display the final bill:- should include pid,name,price,custname,email,phoneno,amount paid
+*customer has a payment,product
+*enter the values at runtime or use constructor.
+----------------------------------------------------------------------------------------------
 Example-1
 --------------------
 package HasADemo;
