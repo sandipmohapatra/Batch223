@@ -1057,6 +1057,7 @@ public static void main(String[] args) {
 ----------------------------------------------------------------------------------------------------
 abstract:- We can declare a class as abstract,method as abstract.
 abstract means it is incomplete.so we have incomplete class ,incomplete method.
+An abstract class can contain abstract method and concrete method (method with body). 
 If we declare class as abstract we cannot create object of that class.
 If we declare method as abstract we don't have method body we have to override the abstract method in the child class.
 and create object of the class class.
@@ -1282,8 +1283,98 @@ ob.display();
 }
 }
 --------------------------------------------------------------------------------------
+Interface :- 
+It is like abstract class but interface contain only abstract methods.we don't use the keyword abstract.
+We cannot create object for the interface.
+we have to implement the interface into a child class and override the abstract methods and create object of the child class. 
+with interface we can do multiple inheritance.
+---------------------------------------------------------------------------------
+example-1
+--------------------
+package HasADemo;
 
+interface a1
+{
+	void display();
+}
+interface a2
+{
+	void display1();
+}
+interface a3 extends a2
+{
+	void display2();
+}
 
+public class InterfaceDemo implements a1,a3  //multiple inheritance
+{
+
+	@Override
+	public void display1() {
+		System.out.println("display1");
+		}
+
+	@Override
+	public void display2() {
+		System.out.println("display2");
+	}
+
+	@Override
+	public void display() {
+		System.out.println("display");
+	}
+public static void main(String[] args) {
+	 InterfaceDemo ob=new  InterfaceDemo();
+	 ob.display();
+	 ob.display1();
+	 ob.display2();
+}
+}
+
+--------------------------------------------------------------------------------------------
+//a variable declared inside the interface is final and static. 
+package HasADemo;
+
+interface a1
+{
+	int a=10;
+	void display();
+}
+interface a2
+{
+	void display1();
+}
+interface a3 extends a2
+{
+	void display2();
+}
+
+public class InterfaceDemo implements a1,a3
+{
+
+	@Override
+	public void display1() {
+		System.out.println("display1");
+		}
+
+	@Override
+	public void display2() {
+		System.out.println("display2");
+	}
+
+	@Override
+	public void display() {
+		System.out.println("display");
+	}
+public static void main(String[] args) {
+	 InterfaceDemo ob=new  InterfaceDemo();
+	 ob.display();
+	 ob.display1();
+	 ob.display2();
+	 System.out.println("the value of a is "+a);
+}
+}
+-------------------------------------------------
 
 
 
