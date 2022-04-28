@@ -1151,10 +1151,91 @@ select only rows
 14)object oriented programming doesnot follow M:M relationship.(TRUE)
 15)DBMS-RBBMS follow how many codd rules?6 rules.
 ------------------------------------------------------------------------------------------------------------------ 
+Example-1
+--------------------
+package HasADemo;
+public class Product
+{
+int pid,price;
+String name;
+public Product(int pid, int price, String name) 
+{
+	this.pid = pid;
+	this.price = price;
+	this.name = name;
+}
+@Override
+public String toString() {
+	return "Product [pid=" + pid + ", price=" + price + ", name=" + name + "]";
+}
+}
+--------------------------------------------------------------------------------
+package HasADemo;
 
+public class Payment 
+{
+	int accno,IFICI,amount;
+	String bankname,yourname;
+	
+	public Payment(int accno, int iFICI, int amount, String bankname, String yourname)
+	{
+		this.accno = accno;
+		this.IFICI = iFICI;
+		this.amount = amount;
+		this.bankname = bankname;
+		this.yourname = yourname;
+	}
 
+	@Override
+	public String toString() 
+{
+	return "Payment [accno=" + accno + ", IFICI=" + IFICI + ", amount=" + amount + ", bankname=" + bankname
+				+ ", yourname=" + yourname + "]";
+	}
+}
+-----------------------------------------------------------------------------
+package HasADemo;
 
+public class Customer 
+{
+String custname,email,phoneno;
+Payment payment;
+Product product;
 
+public Customer(String custname, String email, String phoneno, Payment payment, Product product)
+{
+	this.custname = custname;
+	this.email = email;
+	this.phoneno = phoneno;
+	this.payment = payment;
+	this.product = product;
+}
+void display()
+{
+	System.out.println("The customer name is "+custname);
+	System.out.println("The customer email is "+email);
+	System.out.println("The customer phone no is "+phoneno);
+	System.out.println("The customer payment details is "+payment);
+	System.out.println("The customer product details is "+product);
+	
+}
+}
+-----------------------------------------------------------------------------
+package HasADemo;
+
+public class MainClass
+{
+public static void main(String[] args) 
+{
+Product p=new Product(101,35000,"Samsang TV")	;
+Payment pay=new Payment(101,1100,35000,"ICICI","Sandip");
+Customer cust=new Customer("sandip","sandip@gmail.com","7766554433",pay,p);
+System.out.println("Final Customer Bill" );
+System.out.println("*********************************************");
+cust.display();
+}
+}
+-----------------------------------------------------------------------------------------------------
 
 
 
