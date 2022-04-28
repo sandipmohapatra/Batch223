@@ -1257,7 +1257,31 @@ cust.display();
 }
 }
 ------------------------------------------------------------------------------------------------------------------------------
+Final :- Final keyword.
+we can declare the class as final.The variable as final and we can have method as final.
+If we declare the class as final we cannot inherite it.
+If we declare the variable as final we have to assign it and cannot be changed.
+If we declare the method as final we cannot override it.
+-----------------------------------------------------------------------------------------------------------------------------
+   example-1
+---------------------------------
+package HasADemo;
 
+final class FinalDemo //final class cannot be extended
+{
+final int a = 10; //final variable has to be assigned and cannot be changed
+final void display()//final method cannot be overriden
+{
+	System.out.println("the value of a is "+a);
+	System.out.println("This is a final method");
+}
+public static void main(String[] args) 
+{
+FinalDemo ob=new FinalDemo();
+ob.display();
+}
+}
+--------------------------------------------------------------------------------------
 
 
 
