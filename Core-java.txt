@@ -1477,7 +1477,30 @@ public static void main(String[] args)
 }
 }
 -----------------------------------------------------------------------------
-
+Exception Handling
+--------------------------------
+This is used to handle the exception and allow the rest part of the program to execute.
+we have 3 types of error.
+1)Compile time error or syntax error:- missing of semi colon,spelling mistake.
+2)logical error :it is due to wrong logic. 
+3)Runtime error:- divide a number by zero,arrayIndexOutofBound,NumberFormatException
+--------------------------------
+In this we will handle only runtime error .if the user commits an error at ruuntime by wrong input we have to handle it and allow the program to execute till the end of the program.
+--------------------------------------------------------------
+we have 5 keywords.
+1)try
+2)catch
+3)finally
+4)throws 
+5)throw
+-----------------------------------------------------------------------------------------
+There are 3 types of exception
+1)checked Exception:-IterruptedException,SQLException,IOException...
+*have to handle the error then it will execute otherwise it gives a compile time error.
+2)unchecked Exception:-divide a number by zero,arrayIndexOutofBound,NumberFormatException
+*if user enter wrong input then it may give a error during when the program is running. 
+3)error:-harddisk crash,stack overflow etc.
+---------------------------------------------------------------
 
 
 
