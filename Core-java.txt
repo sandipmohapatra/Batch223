@@ -1435,7 +1435,48 @@ public static void main(String[] args) {
 	}
 }
 -----------------------------------------------------------------------------------------------------
+package org.inheritance;
+public class OverloadingDemo1 
+{
+void swap(int a,int b)
+{
+int swap;
+swap=a;
+a=b;
+b=swap;
+System.out.println("The value of a is "+a);
+System.out.println("The value of  b is "+b);
+}
 
+void swap(float a,float b)
+{
+float swap;
+swap=a;
+a=b;
+b=swap;
+System.out.println("The value of a is "+a);
+System.out.println("The value of  b is "+b);
+}
+
+void swap(double a,double b)
+{
+double swap;
+swap=a;
+a=b;
+b=swap;
+System.out.println("The value of a is "+a);
+System.out.println("The value of  b is "+b);
+}
+
+public static void main(String[] args) 
+{
+	OverloadingDemo1 ob=new OverloadingDemo1();
+	ob.swap(10,20);
+	ob.swap(10.3f, 20.5f);
+	ob.swap(45.23, 45.11);
+}
+}
+-----------------------------------------------------------------------------
 
 
 
