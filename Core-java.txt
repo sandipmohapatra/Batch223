@@ -1480,6 +1480,7 @@ public static void main(String[] args)
 Exception Handling
 --------------------------------
 This is used to handle the exception and allow the rest part of the program to execute.
+The program should execute till the end.
 we have 3 types of error.
 1)Compile time error or syntax error:- missing of semi colon,spelling mistake.
 2)logical error :it is due to wrong logic. 
@@ -1501,7 +1502,31 @@ There are 3 types of exception
 *if user enter wrong input then it may give a error during when the program is running. 
 3)error:-harddisk crash,stack overflow etc.
 ---------------------------------------------------------------
-
+example-1
+-------------------
+package org.inheritance;
+import java.util.*;
+public class ExceptionDemo1 
+{
+public static void main(String[] args) 
+{
+	try
+	{
+Scanner ob=new Scanner(System.in);
+System.out.println("Enter 2 nos");
+int a=ob.nextInt();
+int b=ob.nextInt();
+int c=a/b;
+System.out.println("The result is :"+c);
+	}
+	catch(Exception ae)
+	{
+		System.out.println("The error is "+ae);
+	}
+System.out.println("the end");
+}
+}
+---------------------------------------------------------------------------
 
 
 
