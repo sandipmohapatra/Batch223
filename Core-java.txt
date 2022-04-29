@@ -1380,6 +1380,7 @@ public static void main(String[] args) {
 -------------------------------------------------
 example-1
 ---------------------
+//function overridding require 2 classes.
 package org.inheritance;
 
 abstract class AbstractDemo1 
@@ -1392,13 +1393,13 @@ class AbstractDemo extends AbstractDemo1
 	@Override
 	int sum(int a, int b) 
 	{
-				return a+b;
+	return a+b;
 	}
 
 	@Override
 	float sum(float a, float b) 
 	{
-				return a+b;
+	return a+b;
 	}
 	public static void main(String[] args) {
 		AbstractDemo ob=new AbstractDemo();
@@ -1408,6 +1409,32 @@ class AbstractDemo extends AbstractDemo1
 			}
 }
 -------------------------------------------------------------------------------------------------
+//function overloading  :- the function name is same but does addition for float,int double ...
+package org.inheritance;
+public class OverloadingDemo 
+{
+int sum(int a,int b)
+{
+return a+b;	
+}
+float sum(float a,float b)
+{
+	return a+b;
+}
+double sum(double a,double b)
+{
+	return a+b;
+}
+public static void main(String[] args) {
+	OverloadingDemo ob1=new OverloadingDemo();
+	System.out.println("The sum is "+ob1.sum(56.33, 53.22));
+	System.out.println("The sum is "+ob1.sum(4,5));
+	System.out.println("The sum is "+ob1.sum(51.33f, 53.22f));
+	System.out.println("The sum is "+ob1.sum(14,15));
+	System.out.println("The sum is "+ob1.sum(21.33f, 33.22f));
+	}
+}
+-----------------------------------------------------------------------------------------------------
 
 
 
