@@ -545,11 +545,14 @@ we have to create object of the child class and access the variables and methods
 *java does not support multiple and hybrid inhertance
 *multiple and hybrid inhertance we will do using interface.
 *first the super class constructor will execute then the child class constructor will execute.
------------------------------------------------------------------------------
+--------------Object Oriented Programming---------------------------------------------------------------
+1)Inheritance:- Reusing of Exsisting code.We have Parent class,child class the child class will inheriting parent class property and it will also have the additional code. 
 
-Polymerphisim
-Encalsulation
-Abstraction
+2)Polymerphisim:- There are 2 types of Poly-merphisim.(many-form)
+a)compile time Polymerphisim---function overloading (example:- int sum(int a,int b),float sum(float a,float b);
+b)runtime Polymerphisim---function overriding(abstract,interface)
+3)Encapsulation:-Protecting of data is known as encapsulation.we use private and protected access specifier to protect our data. It binds the data into a single unit. 
+4)Abstraction:- Hiding the complexcity and displaying the simplicity is known as abstraction.In the methods of the class complex algorithim are written .Out the class we only call the methods using object.(example-fan)
 -------------------------------------------------------------------------------------
 example-1
 ------------------------
@@ -1375,7 +1378,36 @@ public static void main(String[] args) {
 }
 }
 -------------------------------------------------
+example-1
+---------------------
+package org.inheritance;
 
+abstract class AbstractDemo1 
+{
+abstract int sum(int a,int b);
+abstract float sum(float a,float b);
+}
+class AbstractDemo extends AbstractDemo1
+{
+	@Override
+	int sum(int a, int b) 
+	{
+				return a+b;
+	}
+
+	@Override
+	float sum(float a, float b) 
+	{
+				return a+b;
+	}
+	public static void main(String[] args) {
+		AbstractDemo ob=new AbstractDemo();
+	System.out.println("The sum is "+ob.sum(4, 5));
+	System.out.println("The sum is "+ob.sum(4.5f, 5.4f));
+	System.out.println("The sum is "+ob.sum(14.5f, 15.4f));
+			}
+}
+-------------------------------------------------------------------------------------------------
 
 
 
