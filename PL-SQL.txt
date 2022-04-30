@@ -510,7 +510,31 @@ dbms_output.put_line(x  ||' get salary= '||n);
 end loop;
 end;
 ------------------------------------------------------------------------------------------
+example-1
+-------------------
+create or replace function calfun(nempno emp223.empono%type)
+return number as
+nsalary emp223.salary%type;
+ntotal emp223.salary%type;
+begin
+select salary,salary*12 into nsalary, ntotal from emp223 where empono=nempno;
+return ntotal;
+end;
 
+--------------------------------------------------
+declare 
+nresult number;
+begin
+nresult:=calfun(145);
+dbms_output.put_line('the nresult is '||nresult);
+end;
+----------------------------------------------
+
+select * from emp223;
+
+------------------------------------
+select calfun(145) from dual;
+------------------------------------------------------------
 
 
 
