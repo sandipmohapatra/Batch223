@@ -495,7 +495,21 @@ dbms_output.put_line(n);
 end loop;
 end;
 -------------------------------------------------
-
+example-3
+----------------
+declare
+cursor c is select salary, name from emp223;
+n number;
+x varchar2(20);
+begin
+open c;
+loop
+fetch c into n,x;
+exit when c %notfound;
+dbms_output.put_line(x  ||' get salary= '||n);
+end loop;
+end;
+------------------------------------------------------------------------------------------
 
 
 
