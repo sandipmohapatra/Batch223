@@ -428,9 +428,9 @@ END IF;
 END;
  
 insert into IBMEMP values(1009,'Vikram','ProjtLead');
------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
 cursor
-------------
+--------------------------------------------------------------------------------------------------------------------
 cursors:- cursors are used whenever one want to retrieve more than one record from the database.cursor is the amount of memory reserved to accomodate more than one row of the table.
 cursor are divide into two types:-
 1)implicit cursor
@@ -470,9 +470,31 @@ dbms_output.put_line(c %rowcount||'   '||x);
 end loop;
 end;
 -------------------------------------------------------------------------------------
-
-
-
+example-1
+------------------
+declare
+cursor c is select name from emp223;
+n varchar2(30);
+begin
+open c;
+fetch c into n;
+dbms_output.put_line(n);
+end;
+---------------------------------------------------
+example-2
+---------------------
+declare
+cursor c is select name from emp223;
+n varchar2(30);
+begin
+open c;
+loop
+fetch c into n;
+exit when c %notfound;
+dbms_output.put_line(n);
+end loop;
+end;
+-------------------------------------------------
 
 
 
