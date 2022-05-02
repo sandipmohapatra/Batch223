@@ -1588,11 +1588,51 @@ public static void main(String[] args) {
 }
 }
 -------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
+so we can also use try-catch or try-finally or both try-catch-finally
+---------------------------------------------------------------------------------------------------
+throws Exception :- It is written with main method or any other methods.
+It is used for checked exception.
+example:- InterruptedException,IOException,SqlException
+---------------------------------------------------------------------------------------------------
+throw :- it is used for user defined exception.
+example:- 
+i)salary should be greater than 18k
+ii)marks should be greater than 0.
+iii)age should be greater than 18 to caste your vote.
+----------------------------------------------------------------------------------------------------
+example-1
+---------------------
+package org.sandip;
+public class ThrowsDemo extends Thread 
+{
+public static void main(String[] args) throws InterruptedException 
+{
+	for(int i=1;i<=10;i++)
+	{
+		System.out.println(i);
+		sleep(1000);//has to be checked with handling error itt will not allow you to run 
+}
+}
+}
+----------------------------------------------------------------------------------------------------------
+example-2
+------------------
+package org.sandip;
+import java.util.*;
+public class ThrowsDemo  
+{
+public static void main(String[] args) throws Exception 
+{
+	Scanner ob=new Scanner(System.in);
+	System.out.println("Enter your age");
+	int age = ob.nextInt();
+	if(age>=18)
+		System.out.println("you are eligible to vote");
+	else
+		throw new Exception ("you are not eligible to vote");
+}
+}
+---------------------------------------------------------------------------------------------------------
 
 
 
