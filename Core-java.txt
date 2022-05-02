@@ -1805,6 +1805,28 @@ public static void main(String[] args)
 }
 }
 -------------------------------------------------------------------------------------------------------
+create a employee class (empno,name,salary,designation)
+store the object in the LinkedHashSet and display it.
+-----------------------------------------------------------------------------------------
+package org.collection;
+import java.util.*;
+public class SetDemo 
+{
+public static void main(String[] args) {
+	LinkedHashSet<Object> ts=new LinkedHashSet<Object>();
+	ts.add(60);
+	ts.add(50);
+	ts.add(40.565);
+	ts.add(20.675);
+	Student st1=new Student(101,"sandip","Bangalore");
+	Student st2=new Student(102,"sunil","Bangalore");
+	ts.add(st1);
+	ts.add(st2);
+			for(Object ob:ts)
+			System.out.println(ob);
+}
+}
+--------------------------------------------------------------------------------------------------------------
 
 
 
