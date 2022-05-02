@@ -1633,14 +1633,137 @@ public static void main(String[] args) throws Exception
 }
 }
 ---------------------------------------------------------------------------------------------------------
+Collection Framework
+--------------------------------------
+Collection framework is a collection of objects.
+It dynamically increases when we add the data and decreases when we delete the data.
+In this we store ,manipulate,insert,sort,search,delete data from the begining,at the middle and at the end.
+The difference between an array and the collection is 
+ i)array size is fixed and accept homogenious data only.
+int a[]=new int[5];
+float a[]=new float[5];
+ii)In collection it can accept hetrogenious data.  
+The size also is not fixed .it dynamically extend or contract when we add or remove data.
 
+In collection frame work we have some interfaces (Set,List,Map,Queue)
+It also provides many classes like (ArrayList,LinkedList,Vector,TreeSet,LinkedHashSet,HashMap,HashTable,Stack)
+------------------------------------------------------------------------------------------
+1)Set(Interface)-----(classes)--TreeSet,HashSet,LinkedHashSet
+  Set :-It does not allow duplicate values.
+TreeSet display the data in sorted order.
+LinkedHashSet :- It displays the data in the same order.
+HashSet:- It displays the data in Random order.
+---------------------------------------------
+Example-1
+---------------------
+package org.collection;
+import java.util.*;
+public class SetDemo 
+{
+public static void main(String[] args) {
+	TreeSet<Integer> ts=new TreeSet<Integer>();
+	ts.add(60);
+	ts.add(50);
+	ts.add(40);
+	ts.add(20);
+	ts.add(30);
+	ts.add(10);
+	ts.add(70);
+	ts.add(80);
+	ts.add(80);
+		System.out.println(ts);
 
+}
+}
+------------------------------------------------------------------------
+Example-2
+------------------
+package org.collection;
+import java.util.*;
+public class SetDemo2 
+{
+public static void main(String[] args) {
+	TreeSet<String> ts=new TreeSet<String>();
+	ts.add("Ball");
+	ts.add("Bat");
+	ts.add("Apple");
+	ts.add("Amit");
+	ts.add("Grapes");
+	ts.add("Orange");
+	System.out.println(ts);
 
+}
+}
+----------------------------------------------------------------------------------
+Example-3
+-----------------------
+package org.collection;
+import java.util.*;
+public class SetDemo3 
+{
+public static void main(String[] args) {
+	HashSet<String> ts=new HashSet<String>();
+	ts.add("Ball");
+	ts.add("Bat");
+	ts.add("Apple");
+	ts.add("Amit");
+	ts.add("Grapes");
+	ts.add("Orange");
+	System.out.println(ts);
 
+}
+}
+------------------------------------------------------------------------
+example-4
+---------------------
+package org.collection;
+import java.util.*;
+public class SetDemo 
+{
+public static void main(String[] args) {
+	HashSet<Integer> ts=new HashSet<Integer>();
+	ts.add(60);
+	ts.add(50);
+	ts.add(40);
+	ts.add(20);
+	ts.add(30);
+	ts.add(10);
+	ts.add(70);
+	ts.add(80);
+	ts.add(80);
+		System.out.println(ts);
+		System.out.println("*********************************");
+		for(Object ob:ts)
+			System.out.println(ob);
 
+}
+}
+-------------------------------------------------------------------------------------
+example-5
+-------------------
+package org.collection;
+import java.util.*;
+public class SetDemo 
+{
+public static void main(String[] args) {
+	LinkedHashSet<Integer> ts=new LinkedHashSet<Integer>();
+	ts.add(60);
+	ts.add(50);
+	ts.add(40);
+	ts.add(20);
+	ts.add(30);
+	ts.add(10);
+	ts.add(70);
+	ts.add(80);
+	ts.add(80);
+		System.out.println(ts);
+		System.out.println("*********************************");
+		for(Object ob:ts)
+			System.out.println(ob);
 
-
-
+}
+}
+-----------------------------------------------------------------------------------------------------------
 
 
 
