@@ -1764,7 +1764,47 @@ public static void main(String[] args) {
 }
 }
 -----------------------------------------------------------------------------------------------------------
+Collection framework is a collection of objects.
+-----------------------------------------------------------------------
+Example-6
+----------------
+package org.collection;
 
+public class Student 
+{
+int rollno;
+String name,address;
+public Student(int rollno, String name, String address) 
+{
+	super();
+	this.rollno = rollno;
+	this.name = name;
+	this.address = address;
+}
+@Override
+public String toString() {
+	return "Student [rollno=" + rollno + ", name=" + name + ", address=" + address + "]";
+}
+}
+-----------------------------------------------------------------------------------
+package org.collection;
+import java.util.*;
+public class LinkedHashSetDemo 
+{
+public static void main(String[] args) 
+{
+	LinkedHashSet<Student> ls=new LinkedHashSet<Student>();
+	Student ob1=new Student(101,"sandip","Bangalore");
+	Student ob2=new Student(102,"kiran","Bangalore");
+	Student ob3=new Student(103,"Madhu","Bangalore");
+	ls.add(ob1);
+	ls.add(ob2);
+	ls.add(ob3);
+	for(Object obj:ls)
+	System.out.println(obj);
+}
+}
+-------------------------------------------------------------------------------------------------------
 
 
 
