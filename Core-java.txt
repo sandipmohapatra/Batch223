@@ -1653,6 +1653,10 @@ It also provides many classes like (ArrayList,LinkedList,Vector,TreeSet,LinkedHa
 TreeSet display the data in sorted order.
 LinkedHashSet :- It displays the data in the same order.
 HashSet:- It displays the data in Random order.
+
+2)List(Interface):- It allows duplicate values.
+It will display the data in the same order.
+class---LinkedList,ArrayList,Vector,stack,queue 
 ---------------------------------------------
 Example-1
 ---------------------
@@ -1827,10 +1831,31 @@ public static void main(String[] args) {
 }
 }
 --------------------------------------------------------------------------------------------------------------
+wap to create a bank class having (accno,name,brachname,balance )
+Store it into a LinkedHashSet and display it.
+-------------------------------------------------------------------------------------------------------------- 
+example-8
+---------------------
+package org.collection;
+import java.util.*;
+public class SetDemo2 
+{
+public static void main(String[] args) {
+	LinkedList<String> ts=new LinkedList<String>();
+	ts.add("Ball");
+	ts.add("Bat");
+	ts.add("Apple");
+	ts.add("Amit");
+	ts.add("Grapes");
+	ts.add("Orange");
+	ts.add(3,"Banana");//insert into the 3rd index
+	ts.remove(2);//remove 2nd index
+	ts.set(3,"Mango");//replace the 3rd index
+	System.out.println(ts);
 
-
-
-
+}
+}
+---------------------------------------------------------------------------------
 
 
 
