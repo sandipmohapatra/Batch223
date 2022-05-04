@@ -2184,7 +2184,34 @@ public static void main(String[] args) {
 	}
 }
 ---------------------------------------------------------------------------------------------------------------------
-
+package org.collection;
+import java.util.*;
+public class HashMapDemo
+{
+public static void main(String[] args) {
+	HashMap<Integer, Student> hm=new HashMap<Integer, Student>();
+	Student st1=new Student(101,"sandip","Bangalore");
+	Student st2=new Student(102,"anil","Bangalore");
+	Student st3=new Student(103,"sunil","Bangalore");
+	Student st4=new Student(104,"arun","Bangalore");
+	hm.put(1,st1);
+	hm.put(2,st2);
+	hm.put(3,st3);
+	hm.put(4,st4);
+	Scanner ob=new Scanner(System.in);
+	System.out.println("Enter the slno you want to search");
+	Integer slno=ob.nextInt();
+	Set st=hm.entrySet();
+	Iterator itr=st.iterator();
+	while(itr.hasNext())
+	{
+	Map.Entry en=(Map.Entry)itr.next();
+	if(en.getKey()==slno)
+	System.out.println(en.getKey()+" ******* "+en.getValue());
+	}
+	}
+}
+---------------------------------------------------------------------------------------------------
 
 
 
