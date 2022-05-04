@@ -2212,6 +2212,46 @@ public static void main(String[] args) {
 	}
 }
 ---------------------------------------------------------------------------------------------------
+File Handling
+------------------------
+1)It is used to store and manage data.
+2)Reading and writing data into a file can be done using byteStream or character stream.
+3)The data flow from source to destination while we copy data from one file to the other.
+4)The process of reading and writing object into file is known as serialization and de-serialization.
+5)we will be using java.io package.
+6)There are 2 types of streams by which we can read and write data into a file.
+a)byte stream
+b)character stream
+7)while working with file we have to handle the exception because it throws checked Exception.
+8)We have exceptions in file like 1)EOFException 2)FileNotFoundException 3)InterruptedIOException 4)IOException
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+example-1
+---------------------
+package org.files;
+import java.io.*;
+import java.util.*;
+public class FilesDemo1
+{
+public static void main(String[] args) 
+{
+Scanner ob=new Scanner(System.in);
+System.out.println("Enter the file name");
+String fname=ob.next();
+File f=new File(fname);
+System.out.println("The file name is "+f.getName());
+System.out.println("The file path is "+f.getPath());
+System.out.println("The file absolute path is "+f.getAbsolutePath());
+System.out.println("The file existing is "+f.exists());
+System.out.println("The file is in read mode "+f.canRead());
+System.out.println("The file is in write mode "+f.canWrite());
+System.out.println("The file is in execute mode "+f.canExecute());
+System.out.println("The file length is "+f.length());
+System.out.println("The file is a file "+f.isFile());
+System.out.println("The file is a directory "+f.isDirectory());
+}
+}
+--------------------------------------------------------------------------------------------------------------
 
 
 
