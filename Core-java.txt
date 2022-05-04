@@ -1883,7 +1883,45 @@ public static void main(String[] args) {
 }
 }
 --------------------------------------------------------------------------------
+example-10
+-------------------
+package org.collection;
+import java.util.*;
+public class LinkedListDemo {
+public static void main(String[] args) {
+	LinkedList<Integer> ls1=new LinkedList<Integer>();
+	LinkedList<Integer> ls2=new LinkedList<Integer>();
+	ls1.add(50);
+	ls1.add(60);
+	ls1.add(40);
+	ls1.add(30);
+	ls1.add(20);
+	ls1.add(10);
+	
+	ls2.add(150);
+	ls2.add(160);
+	ls2.add(110);
+	ls2.add(120);
+	ls2.add(130);
+	ls2.add(140);
+	ls1.addFirst(9);
+	ls1.addLast(99);
+	ls2.removeFirst();
+	ls2.removeLast();
+	for(Object obj:ls1)
+		System.out.println(obj);
+	System.out.println("-------------------------------------");
+	for(Object obj1:ls2)
+		System.out.println(obj1);
+	System.out.println("-------------------------------------");
+	ls1.addAll(ls2);
+	for(Object obj:ls1)
+		System.out.println(obj);
+	System.out.println("-------------------------------------");
 
+}
+}
+------------------------------------------------------------------------------------------------------------------------------
 
 
 
