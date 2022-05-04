@@ -2097,7 +2097,51 @@ System.out.println(hm);
 }
 }
 -------------------------------------------------------------------------------------
-
+HashMap is converted to set because we don't have Iterator();
+HashMap has a method called entrySet() to convert HashMap to Set.
+Set st=hm.entrySet();
+*Map.Entry Interface has 2 methods 1)getKey()  2)getValue()
+----------------------------------
+Set st=hm.entrySet();
+Iterator itr=sr.iterator();
+while(itr.hasNext())
+{
+Map.Entry en=(Map.Entry)itr.next();
+System.out.println(en.getKey()+"  "+en.getValue());
+}
+-----------------------------------------------------------------------
+Example-1
+------------------
+package org.collection;
+import java.util.*;
+public class MapDemo 
+{
+public static void main(String[] args) 
+{
+HashMap<Integer, String> hm=new HashMap<Integer, String>();
+hm.put(1, "sandip");
+hm.put(2, "sunil");
+hm.put(4, "sumeet");
+hm.put(3, "sakeet");
+hm.put(5, "anil");
+hm.put(7, "amit");
+hm.put(6, "arun");
+hm.put(6, "kiran");
+Scanner ob=new Scanner(System.in);
+System.out.println("Enter key and value");
+int x=ob.nextInt();
+String y=ob.next();
+hm.put(x, y);
+Set st=hm.entrySet();
+Iterator itr=st.iterator();
+while(itr.hasNext())
+{
+Map.Entry en=(Map.Entry)itr.next();
+System.out.println(en.getKey()+" ******* "+en.getValue());
+}
+}
+}
+---------------------------------------------------------------------------------
 
 
 
