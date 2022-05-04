@@ -2252,7 +2252,45 @@ System.out.println("The file is a directory "+f.isDirectory());
 }
 }
 --------------------------------------------------------------------------------------------------------------
-
+ByteStream
+----------------------
+1)InputStream---------------reading data from the file.
+2)OutputStream--------------writing data from the file.
+---------------------------------------------------------------------------
+BufferedInputStream
+BufferedOutStream
+----------------------------------------------
+FileInputStream
+FileOutputStream
+-------------------------------------------------
+ObjectInputStream
+ObjectOutputStream
+---------------------------------------------------
+DataInputStream
+DataOutputStream
+--------------------------------------------------------
+example-2
+-----------------
+package org.files;
+import java.io.*;
+import java.util.*;
+public class FilesDemo2
+{
+public static void main(String[] args)throws Exception  
+{
+	DataInputStream dis=new DataInputStream(System.in);
+	FileOutputStream fis=new FileOutputStream("student.txt");
+	System.out.println("Enter the data");
+int data;
+while((data=dis.read())!='\n')
+{
+	fis.write(data);
+}
+System.out.println("Witting over");
+dis.close();fis.close();
+}
+}
+------------------------------------------------------------------------------------------------
 
 
 
