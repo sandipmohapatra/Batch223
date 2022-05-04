@@ -2042,3 +2042,50 @@ public static void main(String[] args) {
 	}
 }
 -------------------------------------------------------------------------------------
+Map :- It is an interface.
+In this we enter key and value pair.
+The key should not be duplicate.The value can be duplicate.
+The key and value pair is known as entry.
+Map is useful to search ,update,delete element on the basis of the key.
+--------------------------------------------------------------------------------------------
+Map-HashMap,LinkedHashMap,TreeMap(sorting);
+-------------------------------------------------------------------------------
+example-1
+-----------------
+package org.collection;
+import java.util.*;
+public class MapDemo 
+{
+public static void main(String[] args) 
+{
+HashMap hm=new HashMap();
+hm.put(1, "sandip");
+hm.put(2, "sunil");
+hm.put(4, "sumeet");
+hm.put(3, "sakeet");
+hm.put(5, "anil");
+hm.put(7, "amit");
+hm.put(6, "arun");
+hm.put(6, "kiran");
+System.out.println(hm);
+}
+}
+----------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
