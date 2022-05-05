@@ -2511,6 +2511,77 @@ public static void main(String[] args)throws Exception
 }
 }
 --------------------------------------------------------------------------------------------------
+create a bank database(accno,name,balance)
+create table
+insert data on customer opening account
+update balance when customer do transaction.
+delete data on customer close the account
+use case and switch 
+---------------------------------------------------------------------------------------------
+Dynamic data entry
+-----------------------------
+example-1
+--------------------
+package org.jdbc;
+import java.sql.*;
+import java.util.*;
+public class FirstJdbc5 
+{
+public static void main(String[] args)throws Exception 
+{
+	Class.forName("oracle.jdbc.driver.OracleDriver");
+	Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","1234");
+	PreparedStatement st=con.prepareStatement("insert into mphasisJdbc values(?,?,?)");
+	Scanner ob=new Scanner(System.in);
+	System.out.println("enter empno,name,salary");
+	int empno=ob.nextInt();
+	String name=ob.next();
+	int salary=ob.nextInt();
+	st.setInt(1,empno);
+	st.setString(2,name);
+	st.setInt(3,salary);
+	st.execute();
+		System.out.println("row inserted");
+}
+}
+--------------------------------------------------------------------------------------------------------------------------
+example-2
+-------------------
+package org.jdbc;
+import java.sql.*;
+import java.util.*;
+public class FirstJdbc6 
+{
+public static void main(String[] args)throws Exception 
+{
+	Class.forName("oracle.jdbc.driver.OracleDriver");
+	Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","1234");
+	PreparedStatement st=con.prepareStatement("update mphasisJdbc set salary=? where empno=?");
+	Scanner ob=new Scanner(System.in);
+	System.out.println("enter empno and salary to be updated");
+	int empno=ob.nextInt();
+	int salary=ob.nextInt();
+	st.setInt(1,salary);
+	st.setInt(2,empno);
+		st.execute();
+		System.out.println("row updated");
+}
+}
+----------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
