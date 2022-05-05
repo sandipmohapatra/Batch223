@@ -2321,6 +2321,24 @@ public static void main(String[] args) throws Exception
 }
 }
 --------------------------------------------------------------------------------------------------------------------
+//reading data from one file and writing data into another file.
+package org.fileDemo;
+import java.io.*;
+public class Fourth {
+public static void main(String[] args) throws Exception
+{
+	FileInputStream fis=new FileInputStream("student.txt");//read
+	FileOutputStream fos=new FileOutputStream("student1.txt");//writing
+	int data;
+	while((data=fis.read())!=-1)
+	{
+		fos.write(data);
+	}
+	fis.close();fos.close();
+	System.out.println("file copied..................");
+}
+}
+----------------------------------------------------------
 
 
 
