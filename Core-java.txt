@@ -2368,7 +2368,57 @@ public class uppercase{
   }
 }}
 ---------------------------------------------------------------------
-
+//writing object into the file and reading object from the file.
+//it is known as serialization and de-serialization
+//ObjectInputStream ---reading object
+//ObjectOutputStream ---writing object.
+Serializable----It is interface with no abstract methods in it.So it is called marker Interface.
+------------------------------------------------------------------------------------------------------------------------------------
+example-6
+------------------------
+package org.fileDemo;
+import java.io.*;
+public class Student implements Serializable
+{
+int rollno;
+String name,address;
+}
+-----------------------------------------------------------------------
+package org.fileDemo;
+import java.io.*;
+public class SerializableDemo 
+{
+public static void main(String[] args)throws IOException 
+{
+	Student obj=new Student();
+	obj.rollno=101;
+	obj.name="sandip";
+	obj.address="bangalore";
+	FileOutputStream fos=new FileOutputStream("object.txt");
+	ObjectOutputStream os=new ObjectOutputStream(fos);
+	os.writeObject(obj);
+	fos.close();os.close();
+	System.out.println("Object written into the file..................");
+}
+}
+-----------------------------------------------------------
+package org.fileDemo;
+import java.io.*;
+public class DeserializableDemo 
+{
+public static void main(String[] args)throws Exception 
+{
+	Student s1=null;
+	FileInputStream fis=new FileInputStream("object.txt");
+	ObjectInputStream os=new ObjectInputStream(fis);
+	s1=(Student) os.readObject();
+	fis.close();os.close();
+	System.out.println("The rollno is "+s1.rollno);
+	System.out.println("The name is "+s1.name);
+	System.out.println("The address is "+s1.address);
+	}
+}
+-----------------------------------------------------------------------------------------------------------
 
 
 
