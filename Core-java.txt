@@ -2419,8 +2419,56 @@ public static void main(String[] args)throws Exception
 	}
 }
 -----------------------------------------------------------------------------------------------------------
+JDBC :-Java Database connectivity
 
-
+path:- C:\oraclexe\app\oracle\product\10.2.0\server\jdbc\lib\ojdbc14.jar 
+copy and paste it on the desktop
+-----------------------------------------
+on the project ----RC ----properties-----java build path---libraries----classpath----add external jar---(add the jar file)---
+apply and close.
+-----------------------------------------------
+example-1
+------------------
+package org.jdbc;
+import java.sql.*;
+public class FirstJdbc 
+{
+public static void main(String[] args)throws Exception 
+{
+	//load the driver
+	Class.forName("oracle.jdbc.driver.OracleDriver");
+	//create connection
+	Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","1234");
+	//query statement
+	Statement st=con.createStatement();
+	st.execute("create table mphasisJdbc(empno number,name varchar2(30),salary number)");
+		
+	System.out.println("table created");
+	
+}
+}
+------------------------------------------------------------------------------------
+example-2
+----------------------
+package org.jdbc;
+import java.sql.*;
+public class FirstJdbc2 
+{
+public static void main(String[] args)throws Exception 
+{
+	//load the driver
+	Class.forName("oracle.jdbc.driver.OracleDriver");
+	//create connection
+	Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","1234");
+	//query statement
+	Statement st=con.createStatement();
+	st.execute("insert into mphasisJdbc values(101,'sandip',56000)");
+		
+	System.out.println("row inserted");
+	
+}
+}
+---------------------------------------------------------------------------------------------------------
 
 
 
