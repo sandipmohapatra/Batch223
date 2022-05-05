@@ -2568,6 +2568,27 @@ public static void main(String[] args)throws Exception
 }
 }
 ----------------------------------------------------------------------------------------------------
+example-3
+---------------
+package org.jdbc;
+import java.sql.*;
+import java.util.*;
+public class FirstJdbc7 
+{
+public static void main(String[] args)throws Exception 
+{
+	Class.forName("oracle.jdbc.driver.OracleDriver");
+	Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","1234");
+	PreparedStatement st=con.prepareStatement("delete from mphasisJdbc where empno=?");
+	Scanner ob=new Scanner(System.in);
+	System.out.println("enter empno to delete");
+	int empno=ob.nextInt();
+	st.setInt(1,empno);
+		st.execute();
+		System.out.println("row deleted");
+}
+}
+-----------------------------------------------------------------------------------------------------------------------------
 
 
 
