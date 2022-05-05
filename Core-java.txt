@@ -2339,7 +2339,35 @@ public static void main(String[] args) throws Exception
 }
 }
 ----------------------------------------------------------
+package org.fileDemo;
+import java.io.*;
+public class uppercase{
 
+    public static void main(String[] args) {
+    
+    try {
+        FileReader reader = new FileReader("student.txt");
+        FileWriter writer = new FileWriter("student2.txt");
+
+        int data;
+        int data2;
+        while((data=reader.read())!= -1) //-1 indicate the end of the file.
+        {
+          data2=Character.toUpperCase(data);
+          writer.write(data2);
+        }
+        reader.close();
+        writer.close();
+
+        
+    } 
+    catch (Exception e) 
+    {
+        e.printStackTrace();
+    
+  }
+}}
+---------------------------------------------------------------------
 
 
 
