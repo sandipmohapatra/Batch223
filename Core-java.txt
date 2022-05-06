@@ -2590,8 +2590,9 @@ public static void main(String[] args)throws Exception
 }
 -----------------------------------------------------------------------------------------------------------------------------
 create a table airlines(fltno,cname,caddress,source,destination)
-1)create table,insert data,update data,delete data
+1)create table,insert data,update data,delete data,select the data
 enter data dynamically.
+use case and switch.
 ----------------------------------------------------------------------------------------
 JDBC notes
 ------------------
@@ -2758,7 +2759,11 @@ public static void main(String[] args)throws Exception
 }
 }
 -------------------------------------------------------------------------------------------------------------------
-
+create a table airlines(fltno,cname,caddress,source,destination)
+1)create table,insert data,update data,delete data,select the data
+enter data dynamically.
+use case and switch.
+------------------------------------------------------------------------------
 
 
 
