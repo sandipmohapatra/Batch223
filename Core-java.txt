@@ -2758,12 +2758,14 @@ public static void main(String[] args)throws Exception
 		System.out.println("no record found....");
 }
 }
--------------------------------------------------------------------------------------------------------------------
+---------------------------------------------Assignment-1----------------------------------------------------------------------
 create a table airlines(fltno,cname,caddress,source,destination)
 1)create table,insert data,update data,delete data,select the data
 enter data dynamically.
 use case and switch.
-------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------
+step-1:- Download tomcat server
+window---preferances---server---runtimeEnvironment---add ----brower the server path.
 
 
 
