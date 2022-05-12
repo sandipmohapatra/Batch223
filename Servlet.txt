@@ -359,12 +359,104 @@ public class Register extends HttpServlet
 create table mphasisRegister(name varchar2(30),pass varchar2(30),email varchar2(30),
 phone varchar2(30),address varchar2(30))
 ----------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
-
+session and cookies
+------------------------------------
+session:- logged in to amazon.the sessions are created in the server.session ID will be created in the server. 
+servlet are stateless.They donot remember the previous state.
+------------------------------------------------------------------------------------------------------------------------------------
+purchasing goods .there are different sections--mobile,watch,cloths,etc.....
+each section your buys any goods it will be stored into a session.
+HttpSession ses=req.getSession(true);//session id will be generated
+ses.setAttribute("x",jeens);----page1
+ses.setAttribute("y",watch); ----page2
+ses.setAttribute("z",shirt); ----page2
+ses.setAttribute("p",shoes); ----page4
+---------------------------------------------------
+finally while billing we can retrive from the session.
+ses.getAttribute("x");
+ses.getAttribute("y"); 
+ses.getAttribute("z");
+ses.getAttribute("p"); 
+--------------------------------------------------------------------
+cookies :- They are local storage.username/password of gmail is stored in cookies.
+in your system every time you login to gmail it willl not ask for username/password.
+---------------------------------------------------------------------------------------------------------------
+Example-1
+----------------------
+<html>
+<body bgcolor=yellow>
+<form action=firstservlet method=get>
+<center><h1>LOGIN FORM</h1><hr><br><br>
+Enter user name<input type=text name=t1 size=20><br>
+Enter password<input type=password name=t2 size=20><br>
+<input type=submit value=login>
+</form>
+</body>
+</html>
+-------------------------------------------
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.annotation.*;
+import java.io.*;
+@WebServlet("/firstservlet")
+public class firstservlet extends HttpServlet
+{
+public void doGet(HttpServletRequest req,HttpServletResponse res)
+{
+try
+{
+res.setContentType("text/html");
+PrintWriter pw=res.getWriter();
+String a=req.getParameter("t1");
+String b=req.getParameter("t2");
+HttpSession ses=req.getSession(true);
+ses.setAttribute("x",a);
+ses.setAttribute("y",b);
+pw.println("<html>");
+pw.println("<form action=secondServlet method=get>");
+pw.println("enter address:");
+pw.println("<input type=text name=t3 size=20><br>");
+pw.println("enter phone no:");
+pw.println("<input type=text name=t4 size=20><br>");
+pw.println("<input type=submit value=submit><br>");
+pw.println("</form></html>");
+pw.close();
+}
+catch(Exception ae)
+{}
+}
+}
+--------------------------------------------------------------------------------------------
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.io.*;
+import javax.servlet.annotation.*;
+@WebServlet("/secondServlet")
+public class secondServlet extends HttpServlet
+{
+public void doGet(HttpServletRequest req,HttpServletResponse res)
+{
+try
+{
+res.setContentType("text/html");
+PrintWriter pw=res.getWriter();
+String c=req.getParameter("t3");
+String d=req.getParameter("t4");
+HttpSession ses=req.getSession(false);
+ses.setAttribute("g",c);
+ses.setAttribute("h",d);
+String a=(String)ses.getAttribute("x");
+String b=(String)ses.getAttribute("y");
+pw.println("the rollno is :"+a);
+pw.println("the name is :"+b);
+pw.println("the address is :"+c);
+pw.println("the phone no is :"+d);
+}
+catch(Exception ae)
+{}
+}
+}
+-------------------------------------------------------------------------------------------------
 
 
 
