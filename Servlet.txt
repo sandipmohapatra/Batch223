@@ -457,9 +457,61 @@ catch(Exception ae)
 }
 }
 -------------------------------------------------------------------------------------------------
+wap to create 3 amazon pages
+shoes,shirt,jeans
+store the item and cost into the session
+display the item and cost at last in the final bill
+no data base.
+---------------------------------------------------------------------
+Create a calculator using servlet
+------------------------------------------------
+session 
+--------------
+They are memory blocks created in the server.
+They are secured.
+Servlet are stateless.They donot remember the previous state.so session are used to store the data and help the servlet stateful.
 
+It is used for online shopping.customer can select some items from every pages and finally get the bill at the last page.
 
+a session is started when a client logs into the server.Till he is connected a session is created.once the client gets disconnected the session is over.
+---------------------------------------------------------------------------------------------------------
+example-1
+----------------
+<html>
+        <body>
+                <form action="CalculateServlet">
+                        Number 1 : <input type="text" name="no1"> <br>
+                        Number 2 : <input type="text" name="no2"> <br> 
+                        Operator : 
+                                     <select name="opt">
+                                <option value="p"> + </option>
+                                <option value="m"> - </option>
+                                <option value="mul"> * </option>
+                                <option value="d"> / </option>                                                                                                          
+                        </select>
+                                       <br>
+                        <input type="submit" value="Go">
+                </form>        </body></html>
 
+-----------------------------------------------------------------------------------------
+import java.io.*;
+import javax.servlet.*;
+ import javax.servlet.annotation.*;
+@WebServlet("/CalculateServlet")
+public class CalculateServlet extends GenericServlet
+{
+        public void service(ServletRequest request,ServletResponse response) throws IOException,ServletException
+        {
+               PrintWriter out = response.getWriter();
+                String n1 = request.getParameter("no1");
+                String n2 = request.getParameter("no2");
+                String opt = request.getParameter("opt");                
+                if(opt.equals("p"))
+                        out.println(Integer.parseInt(n1) + Integer.parseInt(n2));
+                else if(opt.equals("m"))
+                       out.println(Integer.parseInt(n1) - Integer.parseInt(n2));
+        }}
+----------------------------------------------------------------------------------------------------------------
 
 
 
