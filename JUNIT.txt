@@ -1,0 +1,57 @@
+JUNIT TESTING
+------------------------
+It is known as functional testing.
+We have 2 parts
+i)actual output
+ii)Expected output
+
+example:-assertEquals(25,add(12,13));
+If both are equal then it display green signal otherwise brown signal
+-------------------------------------------------------------------------------------------------------
+Maven is a Tool .It provides the supporting jar files.
+example-for jdbc,servlet we added jar files manually.
+It was easy because it was single jar.Coming to spring framework  we have 25 to 30 jars .
+So it will be difficult to search and add the jar files.If the spring version changes then
+we have search for the jar files again of the same version which are compactible.So it is a 
+difficult job.
+In that case if we use maven .we have to only specify the spring version .It will only
+download the  compactable version.
+--------------------------------------------------------------------
+step 1:- file--->new--->maven project.
+step 2:- create simple project
+step 3:- groupid :- org.sandip (package name)
+step 4:- artifactId :-FirstMavenProj  (project name)
+----------------------------------------------------------------------------------------
+folder structure
+--------------------------------
+1)src/main/java
+2)src/main/resources
+3)src/test/java
+4)src/test/resources
+----------------------------------
+POM.xml :-
+maven dependency for junit 4
+---------------------------------------------------------------------------------- 
+<dependencies>
+  <!-- https://mvnrepository.com/artifact/junit/junit -->
+<dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.12</version>
+    <scope>test</scope>
+</dependency>
+  </dependencies>
+------------------------------------------------------------------------------------------------
+once you save the jar files will be downloaded.
+new folder will be created ---Maven Dependencies and jar files will be stored in it.
+----------------------------------------------------------------------------------------------------------------
+maven dependency for servlet
+----------------------------------------------------------
+<!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
+<dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>servlet-api</artifactId>
+    <version>2.5</version>
+    <scope>provided</scope>
+</dependency>
+---------------------------------------------------------------------------------------------------- 
