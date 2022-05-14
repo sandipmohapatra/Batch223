@@ -231,6 +231,26 @@ Implicit object:-
 8)execption-- Exception
 9)pageContext - JspWriter
 ----------------------------------------------
+JSP EXAMPLE-1
+----------------------------------------------
+<html>
+    <head>
+   <title>JSP Page</title>
+    </head>
+    <body>
+        <%
+        out.println("JSP Scripting tag");
+         %>
+        <h1>Welcome to jsp</h1><br>
+        <h1> Jsp and Html are embeded </h1><br>
+                <%
+        out.println("welcome to jsp page");
+		out.println("<br>");
+        out.println("welcome to jsp page");
+      %>
+     </body>
+     </html>
+-----------------------------------------------------------------------------------------
 
 
 
