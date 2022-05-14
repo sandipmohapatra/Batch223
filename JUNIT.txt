@@ -170,3 +170,67 @@ public void testString()
 }
 }
 ------------------------------------------------------------------------------------------
+@BeforeClass ---This will execute for one time before the tests
+
+@Before ---This will execute before each test
+@Test class
+@After---This will execute after each test
+
+@Before ---This will execute before each test
+@Test class
+@After---This will execute after each test
+
+@AfterClass ---This will execute for one time after the tests
+
+-----------------------------------------------------------------------
+example-3
+---------------------
+import static org.junit.Assert.assertEquals;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+public class Test3 
+{
+Calculator ob=new Calculator();
+@BeforeClass
+public static void beforeclassSetup()throws Exception
+{
+	System.out.println("Before Class");
+}
+@Before
+public void beforeTestSetup()
+{
+	System.out.println("Before Test");
+}
+@Test
+public void subTest()
+{
+	assertEquals(10,ob.sub(16, 6));
+}
+
+@Test
+public void addTest()
+{
+	assertEquals(16,ob.add(16, 6));
+}
+
+@After
+public void afterTestSetup()
+{
+	System.out.println("After Test");
+}
+
+@AfterClass
+public static void afterclassSetup()throws Exception
+{
+	System.out.println("After Class");
+}
+}
+------------------------------------------------------------------------------------------------------
+
+
+
+
