@@ -251,7 +251,22 @@ JSP EXAMPLE-1
      </body>
      </html>
 -----------------------------------------------------------------------------------------
-
+Example-2
+----------------
+   <html>
+    <head>
+         <title>JSP Page</title>
+    </head>
+    <body>
+         <%
+        int a=10,b=20,sum;
+        sum=a+b;
+        out.println("the sum of two numbers is"+sum);
+        %>
+      <h1>Hello World!</h1>
+      </body>
+     </html>
+---------------------------------------------------------
 
 
 
