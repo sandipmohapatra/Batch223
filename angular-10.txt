@@ -16,9 +16,6 @@ It provides faster rendering.
 10)Previous version used JIT compiler [just-in-time]
 *it compiles your code after the page is loaded into the browser. 
 --------------------------------------------------------------------------------------------------
-exceute in visual studio code :-
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser  
----------------------------------------------------------------------------------------------
 steps for Installation
 --------------------------------------
 install node.js
@@ -28,8 +25,9 @@ install visual studio code
 https://code.visualstudio.com/download
 ------------------------------------------------------------------
 1)npm install -g @angular/cli
-2)C:\projects-workspace>ng new batch201
-3)C:\projects-workspace\batch201>ng serve 
+2)C:\projects-workspace\desktop>ng new batch223
+----C:\projects-workspace\desktop>cd batch223
+3)C:\projects-workspace\desktop\batch223>ng serve 
 4)Browser- Application starts on Live Server listening on http://localhost:4200
 To create subfolders
 5)C:\Users\sandip\Desktop\amazon\src\app>ng g c login --skipTests
@@ -162,4 +160,101 @@ oneway
 2)change in index.html <-----<app-root></app-root>
 3)change in bootstrap[OnewayComponent]   <--app.module.ts
 
-------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+Example-1
+-------------------------------------
+<h1>Employee Registration Page</h1><hr>
+<form>
+<table>
+<tr><td>Enter your name</td><td><input type=text name=t1 size=20></td></tr>
+<tr><td>Enter your email</td><td><input type=text name=t2 size=20></td></tr>
+<tr><td>Enter your address</td><td><input type=text name=t3 size=20></td></tr>
+<tr><td>Enter your phoneno</td><td><input type=text name=t4 size=20></td></tr>
+<tr><td>Enter your nationality</td><td><input type=text name=t5 size=20></td></tr>
+<tr><td></td><td><input type=submit value="submit"></td></tr>
+</table>
+</form>
+--------------------------------------------------------------------------------------------------------
+step 1:- index.html
+<app-root></app-root>
+-------------------------------------------------
+step 2:-app.module.ts
+bootstrap: [AppComponent]
+---------------------------------------------------------
+create a registration page
+ng g c registration --skipTests
+----------------------------------------------------------------
+create a contact page
+ng g c contact --skipTests
+-------------------------------------------------------------
+
+module-1 creation
+-------------------------------------
+index.html
+----------------------------------
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Batch223</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <app-registration></app-registration>  <---------------------------------
+</body>
+</html>
+-----------------------------------------------------
+app.module.ts
+----------------------
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { RegistrationComponent } from './registration/registration.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    RegistrationComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [RegistrationComponent]  <---------------------------------
+})
+export class AppModule { }
+---------------------------------------------------------------------
+registration.component.html
+-----------------------------------------------
+<h1>Employee Registration Page for Angular</h1><hr>
+<form>
+<table>
+<tr><td>Enter your name</td><td><input type=text name=t1 size=20></td></tr>
+<tr><td>Enter your email</td><td><input type=text name=t2 size=20></td></tr>
+<tr><td>Enter your address</td><td><input type=text name=t3 size=20></td></tr>
+<tr><td>Enter your phoneno</td><td><input type=text name=t4 size=20></td></tr>
+<tr><td>Enter your nationality</td><td><input type=text name=t5 size=20></td></tr>
+<tr><td></td><td><input type=submit value="submit"></td></tr>
+</table>
+</form>
+--------------------------------------------------------------------------
+step 1:- app>ng g c contact --skipTests
+step 2:-change selector in index.html
+step 3:-bootstrap: [RegistrationComponent]  in app.module.ts
+step 4:-ng serve
+step 5:-localhost:4200
+------------------------------------------------------------------------------
+registration page
+login page
+contact page
+service page
+feedbackpage
+--------------------------------------------------------------------------
+
+
+
+
