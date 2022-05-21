@@ -5,7 +5,7 @@ Angular 8/9/10
 3)it provides testing framework like jasmine,karma,protractor.
 4)language used for angular is typescript.It support oops.(javascript-var)
 5)Framework supported are MVC,MVVM
-6)it is also used for cross flatform mobile and web appliaction.
+6)it is also used for cross platform mobile and web appliaction.
 7)it is used for SPA (single page application) .
 8)it has high speed and performance is better as compared to older technolgy 
 used webpages.
@@ -21,6 +21,12 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ---------------------------------------------------------------------------------------------
 steps for Installation
 --------------------------------------
+install node.js
+https://nodejs.org/en/download/
+cmd>node -v
+install visual studio code
+https://code.visualstudio.com/download
+------------------------------------------------------------------
 1)npm install -g @angular/cli
 2)C:\projects-workspace>ng new batch201
 3)C:\projects-workspace\batch201>ng serve 
