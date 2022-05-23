@@ -254,7 +254,54 @@ contact page
 service page
 feedbackpage
 --------------------------------------------------------------------------
+Routing (navigating)
+-------------------------------------
+step1 :-create a new file
+-----------------------
+import { Component } from '@angular/core';
+@Component({
+  selector: 'app-routing',
+  template:`Batch 223<ul>
+  <li><a [routerLink]="['/Registration']">Registration</a></li>
+  <li><a [routerLink]="['/Contact']">Contact</a></li>
+  </ul><hr><hr>
+  <router-outlet></router-outlet>
+  `
+ })
+export class AppRouting {
+  title = 'batch223';
+}
+-----------------------------------------------------
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { ContactComponent } from './contact/contact.component';
+import { AppRouting } from './RoutingDemo'; <------------------------
+import { RouterModule,Routes } from '@angular/router';  <-----------------------
 
-
-
+const appRoutes : Routes=[			<------------------------
+{path:'Registration',component:RegistrationComponent},
+{path:'Contact',component:ContactComponent},
+]
+@NgModule({
+  declarations: [
+    AppComponent,
+    RegistrationComponent,
+    ContactComponent,
+    AppRouting			<--------------------------
+  ],
+  imports: [
+    RouterModule.forRoot(appRoutes),<------------------------------
+    BrowserModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [AppRouting]  <--------------------------------------
+})
+export class AppModule { }
+----------------------------------------------------------------------------
+step 5:--changte in index.html
+---------------------------------------------------------
 
