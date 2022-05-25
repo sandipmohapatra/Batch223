@@ -303,5 +303,77 @@ const appRoutes : Routes=[			<------------------------
 export class AppModule { }
 ----------------------------------------------------------------------------
 step 5:--changte in index.html
----------------------------------------------------------
+---------------Angular Assignment-1------------------------------------------
+create an application using angular
+COID-19 Hospital
+registration
+doctor time table
+book a bed
+book a doctor
+book a ambulance
+give feedBack
+------------------------------------------------------------------------------
+ example-1
+------------------
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-contact',
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.css']
+})
+export class ContactComponent {
+}
+-----------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <h2>Student Registration Page</h2>
+  <form role="form" action=second>
+    <div class="form-group">
+        <label for="name">Name:</label>
+  <input type="text" class="form-control" id="name" placeholder="Enter name" name=t1 required>
+      </div>
+      <div class="form-group">
+        <label for="number">Phone no:</label>
+  <input type="Number" class="form-control" id="Phone" placeholder="Enter phone no" name=t2 required>
+      </div>
+   
+    
+    <div class="form-group">
+      <label for="email">Email:</label>
+<input type="email" class="form-control" id="email" placeholder="Enter email" name=t3 required>
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name=t4 required>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox"> Remember me</label>
+    </div>
+<button type="submit" class="btn btn-default">Submit</button> 
+  </form></div></body></html>
+--------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
 
