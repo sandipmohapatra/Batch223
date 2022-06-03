@@ -1,0 +1,743 @@
+WebServices
+---------------------------
+There are 2 types of web services.
+1)SOAP :- 
+2)REST :-Representational State Transfer.
+----------------------------------------------------------
+Rest webservices uses HTTP protocal.
+Rest is an architectural approach.We have many webservices present in the web.
+Example :- Online movie Ticket,Ola,Uber,swiggie ,paytm,google pay.These are all webservices.
+we can access these webservices using any programing language.In paytm we can have many services combined together.like paying utility bill. money transfer from one bank to another bank.
+The data transfer will be in the form of either XML,Html or JSOn format.
+Restful webservices are platform and language independent.
+we can access webservices by using PHP,java,.net,python,c++.
+----------------------------------------------------------------------------------------------------------------
+we have some methods in HTTP which we use in Restful webservices to enter data,save data,update data or delete data.
+1)GET :- it used to read a resource(database) and display the data.
+2)PUT:- It is used to update an existing data in the resource.
+3)POST:- It is used to create a new data in the resource.
+4)DELETE :-It is used to delete data from the resource.
+------------------------------------------------------------------------------------------
+Example-1
+------------------
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+
+@SpringBootApplication
+public class WebServicesExample1Application {
+
+	public static void main(String[] args) 
+	{
+	ApplicationContext ac=SpringApplication.run(WebServicesExample1Application.class, args);
+	MyMessage obj=ac.getBean("msg",MyMessage.class);
+	obj.welcome();
+	}
+
+}
+------------------------------------------------------
+package com.example.demo;
+
+import org.springframework.stereotype.Component;
+
+@Component("msg") //an object by the name msg will be created for this class.
+public class MyMessage 
+{
+public void welcome()
+{
+	System.out.println("welcome to webservices");
+}
+}
+----------------------------------------------------------------------------
+Example-2
+-----------------
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+
+@SpringBootApplication
+public class WebServicesExample2Application {
+
+	public static void main(String[] args) {
+		ApplicationContext ac=SpringApplication.run(WebServicesExample2Application.class, args);
+		MyMessage1 abc=ac.getBean("obj",MyMessage1.class);
+		System.out.println("The sum is "+abc.sum(4, 6));
+		System.out.println("The sub is "+abc.sub(14, 6));
+			}
+
+}
+-------------------------------------------------------------------------
+package com.example.demo;
+
+import org.springframework.stereotype.Component;
+
+@Component("obj")
+public class MyMessage1
+{
+public int sum(int a,int b)
+{
+	return a+b;
+	}
+public int sub(int a,int b)
+{
+	return a-b;
+	}
+
+}
+-----------------------------------------------------------------------
+Example-3
+-----------------
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class WebServicesExample3Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(WebServicesExample3Application.class, args);
+	}
+
+}
+----------------------------------------------------------------
+package com.example.demo;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+@Component
+public class MyMessage2 implements CommandLineRunner
+{
+int empno=10;
+String name="sandip";
+	public void run(String... args)throws Exception
+	{
+		System.out.println("Hello All");
+		System.out.println("The name is"+name);
+		System.out.println("The empno is"+empno);
+		}
+}
+----------------------------------------------------------------------------------------------------
+package com.example.demo;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+import java.util.*;
+@Component
+public class MyMessage3 implements CommandLineRunner
+{
+	Scanner ob=new Scanner(System.in);
+
+	public void run(String... args)throws Exception
+	{
+		System.out.println("Hello All");
+		System.out.println("Enter empno,name");
+		int empno=ob.nextInt();
+		String name=ob.next();
+		System.out.println("The name is"+name);
+		System.out.println("The empno is"+empno);
+	}
+}
+
+
+
+
+-------------------------------------------------------Assignment-1-----------------------------------------
+1)Create 5 extra files where you can enter the student's info (rollno,name,sub1,sub2,sub3 find sum and avg)
+@Order
+----------------------------------------------------------------------------------------------------------
+2)Create a Bank project where you can register few customers and store them.
+customer(accno,name,address,phoneno,email,adharno)
+
+------------------------------------------Example-4--------------------------------------------------
+1)File --->new--->spring starter project
+2)change -->jar to war
+3)web --->spring web
+4)under webapp create folder ---->WEB-INF--->views---->login.jsp,register.jsp,contact.jsp
+------------Login.jsp---------------
+<html>
+<form>
+<h1><center>Employee Login Page</center></h1><hr><hr>
+<table>
+<tr><td>Enter username<td><input type=text name=t1 size=20 required></tr>
+<tr><td>Enter password<td><input type=password name=t2 size=20 required></tr>
+<tr><td><td><input type=submit value=submit></tr>
+</table>
+</form>
+</html>
+----------------------------------------Register.jsp-----------------------------------------------------
+<html>
+<form>
+<h1><center>Employee Registration Page</center></h1><hr><hr>
+<table>
+<tr><td>Enter your name<td><input type=text name=t1 size=20 required></tr>
+<tr><td>Enter your address<td><input type=text name=t2 size=20 required></tr>
+<tr><td>Enter your email<td><input type=text name=t3 size=20 required></tr>
+<tr><td>Enter your phone no<td><input type=text name=t4 size=20 required></tr>
+<tr><td>Enter salary<td><input type=text name=t5 size=20 required></tr>
+<tr><td>Enter designation<td><input type=text name=t6 size=20 required></tr>
+<tr><td><td><input type=submit value=submit></tr>
+</table>
+</form>
+</html>
+--------------------------------------------------------------------------------------------------------------
+TestController.java
+----------------------------------------
+package com.example.demo;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class TestController {
+
+@GetMapping("/log")
+public String showLogin()
+{
+	return "login";
+}
+@GetMapping("/reg")
+public String showRegister()
+{
+	return "register";
+}
+}
+----------------------------------------------------------------------------------------------------------------
+pom.xml
+-----------------
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+-----------------------------------application.properties---------------------------------------
+server.port=8090
+
+spring.mvc.view.prefix=/WEB-INF/views/
+spring.mvc.view.suffix=.jsp
+--------------------------------example-5--------------------
+
+package com.example.demo;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class TestController {
+
+@GetMapping("/log")
+public String showLogin()
+{
+	return "login";
+}
+@GetMapping("/reg")
+public String showRegister()
+{
+	return "register";
+}
+@RequestMapping("/save")
+public String getRequest(HttpServletRequest req,HttpServletResponse res)throws ServletException,IOException
+{
+	PrintWriter pw=res.getWriter();
+	String a=req.getParameter("t1");
+	String b=req.getParameter("t2");
+	String c=req.getParameter("t3");
+	String d=req.getParameter("t4");
+	String e=req.getParameter("t5");
+	String f=req.getParameter("t6");
+	
+	return "success";
+	
+}
+
+}
+---------------------------------------------------------------------------------------------------
+<html>
+<form action="save">--------------------change-------------------
+<h1><center>Employee Registration Page</center></h1><hr><hr>
+<table>
+<tr><td>Enter your name<td><input type=text name=t1 size=20 required></tr>
+<tr><td>Enter your address<td><input type=text name=t2 size=20 required></tr>
+<tr><td>Enter your email<td><input type=text name=t3 size=20 required></tr>
+<tr><td>Enter your phone no<td><input type=text name=t4 size=20 required></tr>
+<tr><td>Enter salary<td><input type=text name=t5 size=20 required></tr>
+<tr><td>Enter designation<td><input type=text name=t6 size=20 required></tr>
+<tr><td><td><input type=submit value=submit></tr>
+</table>
+</form>
+</html>
+---------------------------------------------------------------------
+
+
+
+Assignment-2
+---------------------------------------------------------
+create a bank project
+login,register
+apply for loan,credit card,debit card
+apply for home loan or car loan
+---------------------------------------------------------
+MySql
+-----------------
+1)to display the database.
+show databases;
+
+2)create database
+create database mphasis215;
+
+3)to enter into the database.
+use mphasis215;
+
+4)to create table
+create table student(rollno int,name varchar(30),address varchar(30)); 
+
+5)to insert data
+insert into student values(1,'sandip','Bangalore');
+
+6)to view the table
+select * from student;
+
+7)update table 
+update student set address='pune' where name='pooja';
+
+8)to delete data from the table
+delete from student where rollno=2;
+---------------------------------------------------------------------------------------------------------------
+step 1:- Create spring starter project.
+step 2:-under webapp create WEB-INF---->views----->register.jsp,success.jsp
+ ---------------------------------
+applicaation.properties
+-------------------------------
+server.port=8090
+
+spring.mvc.view.prefix=/WEB-INF/views/
+spring.mvc.view.suffix=.jsp
+
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.url=jdbc:mysql://localhost:3306/mphasis215
+spring.datasource.username=root
+spring.datasource.password=1234
+
+--------------------------------------------------------------------------------------------
+pom.xml
+--------------------
+<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.3.1.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.46</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<scope>provided</scope>
+		</dependency>
+--------------------------------------------------------------------------------------------------------------------
+spring is lightweight framework .wiith the help of jar files only it will run.
+---------------------------------------------------------------------------------------------------------
+controller
+----------------
+package com.example.demo;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class TestController 
+{
+
+	@Autowired
+	private JdbcTemplate jt;//file which connect java with database.
+	
+	
+	@GetMapping("/reg")
+	public String showRegister()
+	{
+		return "Register";
+	}
+	@RequestMapping("/save")
+	public String doRegister(HttpServletRequest req,HttpServletResponse res)throws ServletException,IOException
+	{
+		String a=req.getParameter("t1");
+		String b=req.getParameter("t2");
+		String c=req.getParameter("t3");
+		String d=req.getParameter("t4");
+		String e=req.getParameter("t5");
+		String f=req.getParameter("t6");
+		String sql="insert into Mstudent values(?,?,?,?,?,?)"; 
+		jt.update(sql,a,b,c,d,e,f);
+		return "success";
+			}
+	
+	
+}
+--------------------------------------------------------------------------------------
+Register.jsp
+----------------------------
+<html>
+<body>
+<form action="save">
+<h1><center>Employee Registration Page</center></h1><hr><hr>
+<table>
+<tr><td>Enter your name<td><input type=text name=t1 size=20></td></tr>
+<tr><td>Enter your address<td><input type=text name=t2 size=20></td></tr>
+<tr><td>Enter your email<td><input type=text name=t3 size=20></td></tr>
+<tr><td>Enter your designation<td><input type=text name=t4 size=20></td></tr>
+<tr><td>Enter your salary<td><input type=text name=t5 size=20></td></tr>
+<tr><td>Enter your phoneno<td><input type=text name=t6 size=20></td></tr>
+<tr><td><td><input type=submit value=submit></td></tr>
+</table>
+</form>
+</body>
+</html>
+<!-- create table mstudent(name varchar(30),address varchar(30),email varchar(30),
+designation varchar(30),salary varchar(30),phoneno varchar(30))  -->
+----------------------------------------------------------------------------
+success.jsp
+--------------------------
+angular + webservice
+
+------------------------------------------
+npm uninstall -g @angular/cli
+npm install -g @angular/cli@latest
+--------------------------------------------------------- 
+Angular +spring (2 servers node server,tomcat server)
+-------------------------------------3 modules------------------------------------------------------------------------------------
+1)student all :- This will display the list of students.we have edit and delete button with this.
+2)student create :- we can insert data into the database.
+3)student edit:- The button is there in student all.To edit the students.
+4)app.component.ts:- In this we have selector: 'app-root'.
+5)student.service.ts:-here we have http sevice for interacting with spring boot.we have different methods in it.
+http://localhost:8090/rest/student :- in service we have the link of spring.
+in spring we have the link for angular.@CrossOrigin(origins = "http://localhost:4200")
+6) CrossOrigin :- it will allow data coming from different server.
+The methods in the student.service.ts 
+1)getAllStudents()
+2)deleteOneStudent(id: number)
+3)createStudent(student: Student)
+4)getOneStudent(id: number)
+5)updateStudent(id: number, student: Student)
+7)Observable:- It is a stream of event or data for communicating with the spring.
+8)subscribe:- to print/publish the data. 
+-----------------------------------------------------------------
+Model-view-Controller :- 
+view :- presentation layer (angular page)
+Model :- it will interact with the database.
+controller:- It controls the total flow of the program.
+--------------------------controller.java---------------------------------------------------------- 
+Integer saveStudent(Student s);
+void updateStudent(Student s);
+void deleteStudent(Integer id);
+Optional<Student> getOneStudent(Integer id);
+List<Student> getAllStudents();
+boolean isStudentExist(Integer id);
+-----------------------------------------------------------------------------------------------------
+In restwebservices we have 4 methods
+-----------------------------------------------
+get():- it is used to retrive the data.
+post():- it is used to save/insert the data.
+put():- it is used to modify the data.
+delete():- It is used to remove the data.
+-------------------------------------------------------------------------------------
+student.service.ts
+-----------------------------
+1)http://localhost:8090/rest/student/All
+2)http://localhost:8090/rest/student/remove/${id}
+3)http://localhost:8090/rest/student/save
+4)http://localhost:8090/rest/student/one/${id}
+5)http://localhost:8090/rest/student/modify/${id}
+----------------------------------------------------------------------------------
+These endpoint URL are coming from angular to springRest.
+Then fetch the data.
+---------------------------------------------------------------------------------------
+how angular is linked with springBootRest
+-------------------------------------------------------------
+1)crossDomain
+2)angular has portno of springbooot
+3)springboot has the portno of angular
+4)The mapping is done from angular to get the data from spring boot.
+-----------------------------------------------------------------------------------------
+spring Boot
+------------------------
+1)main.java
+2)controller.java is used for mapping
+3)model is used for creating table.<student>
+4)repository :- it is a interface with predefined methods.StudentRepository extends JpaRepository<Student, Integer>
+	Integer saveStudent(Student s);:- to enter the new data
+	void updateStudent(Student s);:- to modify the data
+	void deleteStudent(Integer id);:-to delete the data with id
+	Optional<Student> getOneStudent(Integer id);:- to search the data by id.
+	List<Student> getAllStudents();:- to display all data. 
+	boolean isStudentExist(Integer id);:- to see the student by this id is present or not.
+5)service:- we have some predefined methods.
+6)serviceimpl :- we define the methods of service Interface.
+7)util :- it is used to modify the data.
+----------------------------------------------------------------------------------
+
+add 2 more columns to angular form phoneno and collage name.
+-------------------------------------Assignment-1-----------------------------------------------------
+create a employee table.
+empno,name,salary,designation,email,phoneno,deptname.
+------------------------------------------------------------------------------------------
+export class Student {
+constructor(
+    public id: number;
+    public name: string;
+    public fee: number;
+    public course: string;
+    public email: string;
+    public addr: string;){}
+}
+-------------------------------------------------------------------------------------------------
+log files:-
+-----------------
+It will print the message to check the flow of the program.
+we have 5 keywords
+1)info
+2)warn
+3)debug
+4)error
+5)fatal
+---------------------------------
+example:-
+---------------
+import org.apache.log4j.Appender;
+import org.apache.log4j.ConsoleAppender;
+import org.apache.log4j.Layout;
+import org.apache.log4j.Logger;
+import org.apache.log4j.SimpleLayout;
+
+public class TestApp {
+	//3.Create Logger object
+	private static Logger log=Logger.getLogger(TestApp.class);
+	
+	public static void main(String[] args) {
+		//1. Create layout
+		Layout layout=new SimpleLayout();
+		//2. create appender + link layout
+		Appender app=new ConsoleAppender(layout);
+		
+		//4. link appender with logger
+		log.addAppender(app);
+		
+		
+		//---Print Messages--------------
+		log.info("FROM INFO");
+		log.debug("FROM DEBUG");
+		log.fatal("FROM FATAL");
+		log.error("FROM ERROR");
+		log.warn("FROM WARN");
+	}
+}
+--------------------------------------------------------------------------
+pom.xml
+------------------
+<dependency>
+	<groupId>log4j</groupId>
+	<artifactId>log4j</artifactId>
+	<version>1.2.17</version>
+</dependency>
+<dependency>
+           <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.5</version>
+</dependency>
+
+-----------------------------------Postman------------------------------------------------------------
+It is a tool for testing the springRestApi.
+Karma/jasmine is use to test angular/javascript or frontend. 
+-------------------------------------------------------------------------------------------------------------
+post:- it is used save the data  
+http://localhost:8090/rest/student/save
+
+{
+  "addr": "Bangalore",
+  "course": "Java",
+  "email": "poooja@gmail.com",
+  "fee": 6700,
+  "id": 0,
+  "name": "pooja"
+}
+-----------------------------------------------------------------
+get:-to retrive the data
+http://localhost:8090/rest/student/All
+
+[
+    {
+        "id": 2,
+        "name": "pooja",
+        "fee": 6700.0,
+        "email": "poooja@gmail.com",
+        "course": "Java",
+        "addr": "Bangalore"
+    },
+    {
+        "id": 1,
+        "name": "priyanka",
+        "fee": 6700.0,
+        "email": "priyanka@gmail.com",
+        "course": "Java",
+        "addr": "Delhi"
+    }
+]
+------------------------------------------------------------------------
+http://localhost:8090/rest/student/one/${id}
+get :- This will display a single data according to the id.
+-----------------------------------------------------------------------------
+{
+    "id": 1,
+    "name": "priyanka",
+    "fee": 6700.0,
+    "email": "priyanka@gmail.com",
+    "course": "Java",
+    "addr": "Delhi"
+}
+------------------------------------------------------------------------------------------------------
+http://localhost:8090/rest/student/modify/${id}
+put:- to modify the record.
+{
+  "addr": "PUNE",
+  "course": "Java",
+  "email": "poooja@gmail.com",
+  "fee": 9700,
+  "id": 0,
+  "name": "pooja"
+}
+---------------------------------------------------------------------------------------------------------
+http://localhost:8090/rest/student/remove/${id}
+delete:- it will delete the record.
+---------------------------------------------------------------------
+swagger :- It is a testing tool to test the springRest API
+------------------------------------------------------------------------------------------
+example:-
+package sandip.swagger.config;
+
+import java.util.Collections;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
+
+import springfox.documentation.builders.PathSelectors;
+import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.service.ApiInfo;
+import springfox.documentation.service.Contact;
+import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spring.web.plugins.Docket;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
+@Profile({"default","qa"})
+@Configuration
+@EnableSwagger2
+public class SwaggerConfig 
+{
+@Bean
+public Docket createDocket()
+{
+	return new Docket(DocumentationType.SWAGGER_2)
+			.select()
+			.apis(RequestHandlerSelectors.basePackage("sandip"))
+			.paths(PathSelectors.ant("/rest/**"))
+			.build()
+			.apiInfo(apiInfo());
+	
+}
+
+private ApiInfo apiInfo() {
+		return new ApiInfo(
+				"STUDENT APP BY SANDIP",
+				"PROGRAM FOR MPHASIS 215",
+				"1ST REST PRG",
+				"http://simoninfotech.com",
+				new Contact("sandip","7760213015","sandipmohapatra123@gmail.com"),
+				"7996997004","http://simoninfotech.com",
+				Collections.emptyList());
+				
+}
+}
+----------------------------------------------------------------------------
+pom.xml
+--------------
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.9.2</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.9.2</version>
+		</dependency>
+-----------------------------------------------------------------------------------------------------------------------------------
+http://localhost:8090/swagger-ui.html
+---------------------------------------------tsconfig.json-------------------------
+"strictPropertyInitialization": false,
+------------------------------------------------------------
+
+	@PostMapping("/save")
+	public ResponseEntity<String> saveStudent(@RequestBody Student student)
+	{
+		log.info("Entered into method with Student data to save");
+
+		ResponseEntity<String> resp = null;
+		try {
+
+			log.info("About to call save Operation");
+
+			Integer id = service.saveStudent(student);
+			log.debug("Student saved with id "+id);
+
+			String body = "Student '"+id+"' created";
+
+			resp =  new ResponseEntity<String>(
+					body,HttpStatus.CREATED); //201
+
+			log.info("Sucess response constructed");
+		} catch (Exception e) {
+			log.error("Unable to save student : problem is :"+e.getMessage());
+			resp =  new ResponseEntity<String>(
+					"Unable to Create Student", 
+					HttpStatus.INTERNAL_SERVER_ERROR); //500
+			e.printStackTrace();
+		}
+
+		log.info("About to Exist save method with Response");
+		return resp;
+	}
+
+
+
