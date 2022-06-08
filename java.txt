@@ -3245,9 +3245,105 @@ DML (insert,update,delete):-execute(),executeUpdate()
 
 10)we cannot have table with same column names.
 -------------------------------------------------------------------------
+Multi-Threading:-multiple task at the same time.
+We have to extend Thread class or implement runable interface.
+Three classes run() are running simultaniously.
+--------------------------------
+example:-
+public class Thread1 extends Thread 
+{
+	public void run()
+	{
+	try
+	{
+for(int i=1;i<=10;i++)
+{
+	System.out.println(i);
+	sleep(1000);
+}
+	}
+	catch(Exception ae)
+	{
+		System.out.println("The error is "+ae);
+	}
+	}
+}
+-----------------------------------------------------
+public class Thread2 extends Thread 
+{
+	public void run()
+	{
+	try
+	{
+for(int i=1;i<=10;i++)
+{
+	System.out.println(i);
+	sleep(1000);
+}
+	}
+	catch(Exception ae)
+	{
+		System.out.println("The error is "+ae);
+	}
+	}
+}
+-----------------------------------------------------------------
+public class Thread3 extends Thread 
+{
+	public void run()
+	{
+	try
+	{
+for(int i=1;i<=10;i++)
+{
+	System.out.println(i);
+	sleep(1000);
+}
+	}
+	catch(Exception ae)
+	{
+		System.out.println("The error is "+ae);
+	}
+	}
+}
+----------------------------------------------------------------------
 
+public class MainClass 
+{
+public static void main(String[] args) {
+	Thread1 ob1=new Thread1();
+	Thread2 ob2=new Thread2();
+	Thread3 ob3=new Thread3();
+	ob1.start();
+	ob2.start();
+	ob3.start();
+}
+}
+---------------------------------------------------------------------------
+Generics in Java
+-------------------------------
+The Java Generics programming is introduced in J2SE 5 to deal with type-safe objects. It makes the code stable by detecting the bugs at compile time.
 
-
+Before generics, we can store any type of objects in the collection, i.e., non-generic. Now generics force the java programmer to store a specific type of objects.
+example:-
+---------------
+import java.util.*;
+public class Treeexample 
+{
+public static void main(String[] args) 
+{
+LinkedHashSet ts<Integer>=new LinkedHashSet<Integer>();
+Integer x=new Integer(3);//x is an object which store int datatype value.
+ts.add(10);//wraps the int to an object and store.
+ts.add(14);
+ts.add(56);
+ts.add(67);
+ts.add(8);
+ts.add(x);
+System.out.println(ts);
+}
+}
+-----------------------------------------------------------------------------
 
 
 
